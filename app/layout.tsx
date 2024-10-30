@@ -19,16 +19,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Swami Associates',
     description: 'Civil engineering and Building construction in Mettupalayam',
-    url: 'https://www.swami-associates.in/',
+    url: 'https://swami-associates.in/',
     siteName: 'Swami Associates',
     images: [
       {
-        url: 'https://www.swami-associates.in/logo.jpg', // Must be an absolute URL
+        url: 'https://swami-associates.in/logo.jpg', // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: 'https://www.swami-associates.in/logo.jpg', // Must be an absolute URL
+        url: 'https://swami-associates.in/logo.jpg', // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: 'My custom alt',

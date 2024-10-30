@@ -6,7 +6,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src="https://www.swami-associates.in/logo.jpg"
+          src="https://swami-associates.in/logo.jpg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -26,7 +26,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            Swami
           </a>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
@@ -34,7 +34,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            Associates
           </a>
         </div>
       </main>
