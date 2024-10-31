@@ -7,7 +7,7 @@ export default function Home() {
         <Image
           className="dark:invert"
           src="https://swami-associates.in/logo.jpg"
-          alt="Next.js logo"
+          alt="Mettupalayam"
           width={180}
           height={38}
           priority
@@ -22,7 +22,7 @@ export default function Home() {
             <Image
               className="dark:invert"
               src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
+              alt="construction"
               width={20}
               height={20}
             />
