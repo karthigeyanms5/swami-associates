@@ -18,7 +18,7 @@ const Header = () => {
     >
       <div className="header-inner">
         <div className="logo">
-          <Image src={saLogo} alt="construction" width={80} />
+          <Image src={saLogo} alt="swami_logo" width={80} />
           {/* Swami Associates */}
         </div>
         {/* <LogoAnimation /> */}
@@ -41,7 +41,8 @@ const Header = () => {
           </li>
         </nav>
         <div className="contact">
-          <a href="tel:+916381918916">Let's work together</a>
+          {/* <a href="tel:+919865619755">Let's work together</a> */}
+          <a href="mailto:swamiassociatesmtp@gmail.com">Let's work together</a>
         </div>
         {/* <div className="hamburger-menu">
           <span></span>

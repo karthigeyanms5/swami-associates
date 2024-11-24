@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../sass/main.scss";
 
-import Header from "../components/Header";
-import Banner from "../components/Banner";
-import Loader from "../components/Loader";
-import Hero from "@/sections/hero";
+import Header from "@/components/Header";
+import Banner from "@/components/Banner";
+import Loader from "@/components/Loader";
+
 
 // export default function Home() {
 //   return (
@@ -52,11 +52,48 @@ import Hero from "@/sections/hero";
 //   );
 // }
 
-export default function Home() {
+export default function Hero() {
+    const [loading, setLoading] = useState(true);
 
-  return (
-    <>
-      <Hero />
-    </>
-  );
+    useEffect(() => {
+        if (loading) {
+            document.querySelector("body")?.classList.add("loading");
+        } else {
+            document.querySelector("body")?.classList.remove("loading");
+        }
+    }, [loading]);
+
+
+
+    return (
+        // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        //   <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <motion.div layout
+        // type='crossfade'
+        >
+            <AnimatePresence>
+                {loading ? (
+                    <motion.div key='loader'>
+                        <Loader setLoading={setLoading} />
+                    </motion.div>
+                ) : (
+                    <>
+                        <Header />
+                        <Banner />
+                        {!loading && (
+                            <div className='transition-image final'>
+                                <motion.img
+                                    transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+                                    src={`/images/image-2.jpg`}
+                                    layoutId='main-image-1'
+                                />
+                            </div>
+                        )}
+                    </>
+                )}
+            </AnimatePresence>
+        </motion.div >
+        //   </main>
+        // </div>
+    );
 }
