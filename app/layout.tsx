@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Swami Associates",
-  description: "Civil engineering and Building construction in Mettupalayam",
+  description: "Civil engineering and Building construction in Mettupalayam. Swami Associates. Engineers and Builders. 2B CRK Building, Bunglowmedu Mettupalayam.",
   openGraph: {
     title: 'Swami Associates',
     description: 'Civil engineering and Building construction in Mettupalayam',
