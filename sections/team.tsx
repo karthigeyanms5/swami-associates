@@ -47,7 +47,7 @@ const Team = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
-                        Our <span className="text-purple-500">Builders</span> that drive results
+                        Our <span className="text-red-500">Builders</span> who drive results
                     </h2>
                     <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                         We are an <span className="font-bold">Builders</span> helping build your dream home.
