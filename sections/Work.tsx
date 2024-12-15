@@ -57,10 +57,17 @@ const Work = () => {
 
                 {/* View All Button */}
                 <div className="text-center mt-12">
-                    <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">
-                        View All
-                    </button>
-                </div>
+  <a
+    href="https://www.instagram.com/swamiassociates_mtp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">
+      View All
+    </button>
+  </a>
+</div>
+
             </div>
         </section>
     );

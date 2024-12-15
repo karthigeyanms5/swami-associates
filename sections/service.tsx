@@ -19,13 +19,13 @@ export default function Service() {
   return (
     <div className="bg-gray-200 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">OUR Service</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Our Service's</h2>
 
-        {services.map((service) => (
+        {services.slice(0, 5).map((service) => (
           <motion.div
             key={service.id}
             className={`relative flex items-center justify-between px-6 py-10 mb-2  cursor-pointer border-b-2 ${hoveredService === service.id
-              ? "bg-black text-orange-500 border-orange-500"
+              ? "bg-slate-50 text-red-500 border-red-500"
               : "bg-transparent text-gray-600 border-gray-300"
               }`}
             onMouseEnter={() => setHoveredService(service.id)}
@@ -44,7 +44,7 @@ export default function Service() {
               }}
             >
               <span
-                className={`text-2xl ${hoveredService === service.id ? "text-white" : "text-orange-500"
+                className={`text-2xl ${hoveredService === service.id ? "text-red-600" : "text-red-400"
                   }`}
               >
                 →
@@ -52,7 +52,7 @@ export default function Service() {
             </motion.div>
 
             {/* Image Display for All Services */}
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {hoveredService === service.id && (
                 <motion.div
                   initial={{ x: 100, opacity: 0 }}
@@ -68,7 +68,7 @@ export default function Service() {
                   />
                 </motion.div>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </motion.div>
         ))}
       </div>

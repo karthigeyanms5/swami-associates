@@ -1,12 +1,8 @@
 'use client';
 import Image from "next/image"
-
 import { useEffect, useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import "../sass/main.scss";
 
-import Header from "@/components/Header";
-import Banner from "@/components/Banner";
 import Loader from "@/components/Loader";
 
 
@@ -29,19 +25,19 @@ export default function Hero() {
                 <AnimatePresence>
                     {loading ? (
                         <motion.div key='loader'>
-                            <Loader setLoading={setLoading} />
+                            {/* <Loader setLoading={setLoading} /> */}
                         </motion.div>
                     ) : (
                         <>
-                            <Header />
-                            <Banner />
+                            {/* <Header />
+                            <Banner /> */}
                             {!loading && (
                                 <div className='transition-image final'>
-                                    <motion.img
+                                    {/* <motion.img
                                         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
                                         src={`/images/image-2.jpg`}
                                         layoutId='main-image-1'
-                                    />
+                                    /> */}
                                 </div>
                             )}
                         </>

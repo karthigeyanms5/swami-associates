@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <TopNav />
-      {/* <Hero /> */}
+      <Hero />
       {/* <About /> */}
       {/* <Stats /> */}
       {/* <TimeTested /> */}
