@@ -1,24 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Header, Nav, Link, SvgBox } from "./Styles";
+import { motion } from "framer-motion";
 
 export default function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-//   // logo scrolling animation
-//   const [scrolled, setScrolled] = useState(false);
+  // Handle scroll event to show/hide the image
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 100); // Image will show after scrolling 100px
+  };
 
-//   // Scroll handler to toggle the scrolled state
-//   const handleScroll = () => {
-//     const scrollPosition = window.scrollY;
-//     setScrolled(scrollPosition > 100); // Adjust threshold as needed
-//   };
-
-//   useEffect(() => {
-//     setIsClient(true);
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
+  }, []);
 
   const iconVariants = {
     opened: {
@@ -34,7 +30,7 @@ export default function TopNav() {
       top: 0,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.3,
+        staggerChildren: 0.1,
       },
     },
     closed: {
@@ -55,11 +51,30 @@ export default function TopNav() {
 
   return (
     <div className="App">
-      <Header className="p-4 sm:p-5 ">
-        <SvgBox
+      {(isScrolled || isOpen) && (
+        <motion.img
+          src="/logo.svg" // Replace with your image URL
+          alt="Top Right Logo"
+          className="fixed top-2 left-4 w-12 h-12 z-50"
+          initial={{ opacity: 0, y: -50 }} // Start with opacity 0 and positioned above
+          animate={{
+            opacity: 1,
+            y: 0, // Move to original position when fully revealed
+          }}
+          transition={{
+            type: "spring", // Add spring animation
+            stiffness: 300, // Increase stiffness for a snappier motion
+            damping: 20, // Adjust damping for faster decay
+            duration: 0.5, // Reduce duration for faster reveal
+          }}
+        />
+      )}
+      <header className="bg-transparent relative flex justify-end z-2 p-4 sm:p-5">
+        <motion.div
           variants={iconVariants}
           animate={isOpen ? "opened" : "closed"}
           onClick={() => setIsOpen(!isOpen)}
+          className="z-10"
         >
           <svg
             width="24"
@@ -73,39 +88,83 @@ export default function TopNav() {
               fill="#000"
             />
           </svg>
-        </SvgBox>
-      </Header>
-
-      <Nav
+        </motion.div>
+      </header>
+      <motion.nav
         initial={false}
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
-        className="text-xl text-black list-none"
+        exit="closed"
+        className={`bg-gray-200 ${
+          isOpen ? "min-h-screen" : "h-0"
+        } w-full fixed top-0 flex flex-col justify-start pt-3 items-center z-1 text-xl text-black list-none overflow-hidden`}
       >
-        <Link className="mb-2" variants={linkVariants}>
-          Work
-        </Link>
-        <Link className="mb-2" variants={linkVariants}>
-          Blog
-        </Link>
-        <Link className="mb-2" variants={linkVariants}>
-          About
-        </Link>
-        <Link className="mb-2" variants={linkVariants}>
-          Gallery
-        </Link>
-        <Link
+        <motion.li
+          className="border-b border-slate-50 py-6 p-6 w-full text-left"
+          style={{ borderBottomWidth: "1px" }}
           variants={linkVariants}
-          href="mailto:swamiassociatesmtp@gmail.com"
         >
-          <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-4 py-1 font-medium text-white backdrop-blur-3xl">
-              Start Your Project
-            </span>
-          </button>
-        </Link>
-      </Nav>
+          <a
+            href="#work"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            Work
+          </a>
+        </motion.li>
+        <motion.li
+          className="border-b border-slate-50 py-6 p-6 w-full text-left"
+          style={{ borderBottomWidth: "2px" }}
+          variants={linkVariants}
+        >
+          <a
+            href="#work"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            Blog
+          </a>
+        </motion.li>
+        <motion.li
+          className="border-b border-slate-50 py-6 p-6 w-full text-left"
+          style={{ borderBottomWidth: "3px" }}
+          variants={linkVariants}
+        >
+          <a
+            href="#work"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </a>
+        </motion.li>
+        <motion.li
+          className="border-b border-slate-50 py-6 p-6 w-full text-left"
+          style={{ borderBottomWidth: "4px" }}
+          variants={linkVariants}
+        >
+          <a
+            href="#work"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            Gallery
+          </a>
+        </motion.li>
+        <motion.li
+          className="border-b border-red-500 py-6 p-6 w-full text-left bg-black text-white"
+          style={{ borderBottomWidth: "2px" }}
+          variants={linkVariants}
+        >
+          <a
+            href="mailto:swamiassociatesmtp@gmail.com"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            Start Your Project
+          </a>
+        </motion.li>
+      </motion.nav>
     </div>
   );
 }

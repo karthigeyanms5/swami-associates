@@ -22,7 +22,7 @@ const projects = [
 
 const Work = () => {
     return (
-        <section className="bg-white py-12 px-4 md:px-16">
+        <section className="bg-white py-12 px-4 md:px-16" id="work">
             <div className="max-w-7xl mx-auto">
                 {/* Title Section */}
                 <div className="text-center mb-12">
