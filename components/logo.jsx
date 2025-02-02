@@ -26,6 +26,7 @@ const LogoAnimation = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
+            style={{ fontFamily: "var(--font-minion)" }}
           >
             Swami Associates
           </motion.div>

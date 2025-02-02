@@ -36,6 +36,7 @@ const Footer = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-xl sm:text-4xl break-words"
+                style={{ fontFamily: "var(--font-minion)" }}
               >
                 Swami Associates
               </motion.a>

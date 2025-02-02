@@ -26,7 +26,8 @@ const Work = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Title Section */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Recent <span className="italic">Projects</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Recent <span className="italic" style={{ fontFamily: "var(--font-minion)" }}
+                    >Projects</span></h2>
                 </div>
 
                 {/* Projects Grid */}

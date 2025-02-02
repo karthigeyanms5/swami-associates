@@ -181,7 +181,7 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white inline-block">
+                        <h1 className="text-4xl md:text-6xl font-bold text-white inline-block " style={{ fontFamily: "var(--font-minion)" }}>
                           Swami Associates
                         </h1>
                       </div>
