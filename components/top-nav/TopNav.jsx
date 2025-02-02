@@ -69,12 +69,43 @@ export default function TopNav() {
           }}
         />
       )}
-      <header className="bg-transparent relative flex justify-end z-2 p-4 sm:p-5">
+      <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
+        {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
+        <div className="md:flex hidden space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg ">
+          {/* <style jsx>{`
+            .slanted-header {
+              top: -10;
+              transform: perspective(1000px) rotateX(-65deg);
+            }
+          `}</style> */}{" "}
+          <a href="#work" className="text-black hover:text-gray-700">
+            Work
+          </a>
+          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <a href="#blog" className="text-black   hover:text-gray-700">
+            Blog
+          </a>
+          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <a href="#about" className="text-black hover:text-gray-700">
+            About
+          </a>
+          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <a href="#gallery" className="text-black hover:text-gray-700">
+            Gallery
+          </a>
+          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <a
+            href="mailto:swamiassociatesmtp@gmail.com"
+            className="text-black hover:text-gray-700"
+          >
+            Contact
+          </a>
+        </div>
         <motion.div
           variants={iconVariants}
           animate={isOpen ? "opened" : "closed"}
           onClick={() => setIsOpen(!isOpen)}
-          className="z-10"
+          className="z-10 md:hidden"
         >
           <svg
             width="24"
