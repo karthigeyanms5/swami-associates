@@ -79,26 +79,22 @@ export default function TopNav() {
             }
           `}</style> */}{" "}
           <a href="#work" className="text-black hover:text-gray-700">
-            Work
+            Projects
           </a>
           <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
           <a href="#blog" className="text-black   hover:text-gray-700">
-            Blog
+            Services
           </a>
           <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
           <a href="#about" className="text-black hover:text-gray-700">
-            About
-          </a>
-          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
-          <a href="#gallery" className="text-black hover:text-gray-700">
-            Gallery
+            Why work with us
           </a>
           <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
           <a
             href="mailto:swamiassociatesmtp@gmail.com"
             className="text-black hover:text-gray-700"
           >
-            Contact
+            Contact Us
           </a>
         </div>
         <motion.div
@@ -140,7 +136,7 @@ export default function TopNav() {
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
-            Work
+            Projects
           </a>
         </motion.li>
         <motion.li
@@ -153,20 +149,7 @@ export default function TopNav() {
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
-            Blog
-          </a>
-        </motion.li>
-        <motion.li
-          className="border-b border-slate-50 py-6 p-6 w-full text-left"
-          style={{ borderBottomWidth: "3px" }}
-          variants={linkVariants}
-        >
-          <a
-            href="#work"
-            className="block w-full h-full"
-            onClick={() => setIsOpen(false)}
-          >
-            About
+            Services
           </a>
         </motion.li>
         <motion.li
@@ -179,7 +162,20 @@ export default function TopNav() {
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
-            Gallery
+            Contact Us
+          </a>
+        </motion.li>
+        <motion.li
+          className="border-b border-slate-50 py-6 p-6 w-full text-left"
+          style={{ borderBottomWidth: "3px" }}
+          variants={linkVariants}
+        >
+          <a
+            href="#work"
+            className="block w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            Why work with us
           </a>
         </motion.li>
         <motion.li
