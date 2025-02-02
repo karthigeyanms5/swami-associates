@@ -2,15 +2,22 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const minionSerif = localFont({
+  src: [{
+    path: "./fonts/MinionPro-Regular.otf",
+    style: "normal",
+  },
+  {
+    path: "./fonts/MinionPro-MediumIt.otf",
+    style: "italic",
+  }
+  ],
+  variable: "--font-minion",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const bahnschrift = localFont({
+  src: "./fonts/bahnschrift.ttf",
+  variable: "--font-bahnschrift",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ fontFamily: "var(--font-bahnschrift)" }}
+        className={`${minionSerif.variable} ${bahnschrift.variable} antialiased`}
       >
         {children}
       </body>
