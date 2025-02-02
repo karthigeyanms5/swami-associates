@@ -50,7 +50,7 @@ export default function TopNav() {
   };
 
   return (
-    <div className="App">
+    <div className="uppercase">
       {(isScrolled || isOpen) && (
         <motion.img
           src="/logo.svg" // Replace with your image URL
@@ -71,7 +71,7 @@ export default function TopNav() {
       )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
-        <div className="md:flex hidden space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg ">
+        <div className="md:flex hidden space-x-4 p-4 bg-white bg-opacity-75 backdrop-blur-lg rounded-bl-lg">
           {/* <style jsx>{`
             .slanted-header {
               top: -10;
@@ -108,6 +108,7 @@ export default function TopNav() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
+            stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
