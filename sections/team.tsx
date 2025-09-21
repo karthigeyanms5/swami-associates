@@ -35,7 +35,7 @@ const teamMembers = [
     {
         id: 3,
         name: "Ar.Karthigeyan M S",
-        description: "Architect / Design Consultent",
+        description: "Architect / Design Consultant",
         image: "team/karti.jpg", // Replace with actual image URL
     },
 ];
