@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 
 export default function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
 
   // Handle scroll event to show/hide the image
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 100); // Image will show after scrolling 100px
-  };
+  // const handleScroll = () => {
+  //   setIsScrolled(window.scrollY > 100); // Image will show after scrolling 100px
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
+  // }, []);
 
   const iconVariants = {
     opened: {
@@ -54,7 +54,7 @@ export default function TopNav() {
       {(isScrolled || isOpen) && (
         <motion.img
           src="/logo.svg" // Replace with your image URL
-          alt="Top Right Logo"
+          alt="Logo"
           className="fixed top-2 left-4 w-12 h-12 z-50"
           initial={{ opacity: 0, y: -50 }} // Start with opacity 0 and positioned above
           animate={{
