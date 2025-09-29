@@ -175,7 +175,7 @@ export default function Hero() {
                         ease: [0.6, 0.01, -0.05, 0.9],
                         duration: 1.6,
                       }}
-                      src={`/images/image-2.jpg`}
+                      src={`/images/image-1.png`}
                       layoutId="main-image-1"
                       className="w-full h-full object-cover"
                     />
