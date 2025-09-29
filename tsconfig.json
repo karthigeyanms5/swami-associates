@@ -24,6 +24,6 @@
       "@/sections/*": ["sections/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sections/service.tsx", "sections/hero.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sections/service.tsx", "sections/hero.jsx", "sections/hero-main.jsx", "sections/legacy.jsx"],
   "exclude": ["node_modules"]
 }

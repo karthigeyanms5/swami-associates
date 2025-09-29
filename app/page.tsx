@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion for animations
 import Hero from "@/sections/hero";
+import Legacy from "@/sections/legacy";
 import Work from "@/sections/Work";
 import About from "@/sections/about";
 import Team from "@/sections/team";
@@ -18,7 +19,7 @@ export default function Home() {
         <TopNav />
       </header>
       <Hero />
-      {/* Other sections */}
+      <Legacy />
       <Service />
       <Work />
       <Team />
