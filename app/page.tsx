@@ -9,6 +9,7 @@ import Team from "@/sections/team";
 import Service from "@/sections/service";
 import Footer from "@/sections/footer";
 import TopNav from "@/components/top-nav/TopNav";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
 
@@ -23,8 +24,8 @@ export default function Home() {
       <Service />
       <Work />
       <Team />
-      <Footer />
-
+      <ContactUs />
+      <Footer />  
       {/* Image revealed with rolling animation after scrolling */}
      
     </>
