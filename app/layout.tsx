@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 
 const minionSerif = localFont({
   src: [{
@@ -59,6 +60,7 @@ export default function RootLayout({
         className={`${minionSerif.variable} ${bahnschrift.variable} antialiased`}
       >
         {children}
+        <MicrosoftClarity />
       </body>
     </html>
   );
