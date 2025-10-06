@@ -29,3 +29,8 @@ body {
     text-wrap: balance;
   }
 }
+
+
+* {
+  scroll-behavior: smooth;
+}

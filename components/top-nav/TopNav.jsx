@@ -6,16 +6,6 @@ export default function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(true);
 
-  // Handle scroll event to show/hide the image
-  // const handleScroll = () => {
-  //   setIsScrolled(window.scrollY > 100); // Image will show after scrolling 100px
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
-  // }, []);
-
   const iconVariants = {
     opened: {
       rotate: 135,
@@ -50,7 +40,7 @@ export default function TopNav() {
   };
 
   return (
-    <div className="uppercase">
+    <div className="uppercase d-flex justify-end">
       {(isScrolled || isOpen) && (
         <motion.img
           src="/logo.svg" // Replace with your image URL
@@ -71,7 +61,7 @@ export default function TopNav() {
       )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
-        <div className="md:flex hidden space-x-4 p-4 bg-white bg-opacity-75 backdrop-blur-lg rounded-bl-lg">
+        <div className="md:flex hidden space-x-4 p-4 ">
           {/* <style jsx>{`
             .slanted-header {
               top: -10;
@@ -91,7 +81,7 @@ export default function TopNav() {
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a
-            href="mailto:swamiassociatesmtp@gmail.com"
+            href="#form"
             className="text-black hover:text-gray-700"
           >
             Contact Us
