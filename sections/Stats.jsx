@@ -7,7 +7,7 @@ export default function Stats() {
   const sectionRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
-  
+
   useEffect(() => {
     statsRef.current.forEach((stat) => {
       const targetValue = +stat.getAttribute("data-target");
@@ -46,7 +46,9 @@ export default function Stats() {
             >
               0+
             </span>
-            <p className="mt-3 text-lg text-red-500 font-medium">Completed Buildings</p>
+            <p className="mt-3 text-lg text-red-500 font-medium">
+              Completed Buildings
+            </p>
           </div>
 
           <div className="transform transition-transform duration-300 hover:scale-105">
@@ -57,18 +59,22 @@ export default function Stats() {
             >
               0+
             </span>
-            <p className="mt-3 text-lg text-red-500 font-medium">Completed Projects</p>
+            <p className="mt-3 text-lg text-red-500 font-medium">
+              Completed Projects
+            </p>
           </div>
 
           <div className="transform transition-transform duration-300 hover:scale-105">
             <span
               ref={(el) => (statsRef.current[2] = el)}
-              data-target="15"
+              data-target={new Date().getFullYear() - 1988}
               className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
             >
               0+
             </span>
-            <p className="mt-3 text-lg text-red-500 font-medium">Years of Experience</p>
+            <p className="mt-3 text-lg text-red-500 font-medium">
+              Years of Experience
+            </p>
           </div>
         </div>
       </div>
