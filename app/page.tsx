@@ -28,9 +28,9 @@ export default function Home() {
       <Stats />
       <Team />
       <ContactUs />
-      <Footer />  
+      <Footer />
       {/* Image revealed with rolling animation after scrolling */}
-     {/* <Modal /> */}
+      {/* <Modal /> */}
     </>
   );
 }
