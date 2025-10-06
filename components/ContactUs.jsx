@@ -29,10 +29,16 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between bg-gray-200 px-6 py-10 md:px-16 md:py-20 gap-10">
+    <div
+      id="form"
+      className="flex flex-col md:flex-row items-start justify-between bg-gray-200 px-6 py-10 md:px-16 md:py-20 gap-10"
+    >
       {/* Left text section */}
       <div className="max-w-md text-left">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 leading-snug">
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-snug"
+          style={{ fontFamily: "var(--font-minion)" }}
+        >
           Ready to build <br /> your dream home? <br />
           Get in touch with us.
         </h2>
