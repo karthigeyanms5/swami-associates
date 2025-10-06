@@ -172,7 +172,7 @@ const Work: React.FC = () => {
       {/* Button */}
       <div className="text-center mt-20 px-6">
         <a href="/works" target="_blank" rel="noopener noreferrer">
-          <button className="bg-white text-neutral-900 px-10 py-4 font-medium text-base uppercase tracking-wider hover:bg-yellow-400 transition-all duration-500 transform hover:scale-105">
+          <button className="bg-white text-neutral-900 px-10 py-4 font-medium text-base uppercase tracking-wider hover:bg-red-500 transition-all duration-500 transform hover:scale-105">
             View All Projects
           </button>
         </a>
