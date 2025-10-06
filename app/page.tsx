@@ -10,6 +10,7 @@ import Service from "@/sections/service";
 import Footer from "@/sections/footer";
 import TopNav from "@/components/top-nav/TopNav";
 import ContactUs from "@/components/ContactUs";
+import Stats from "@/sections/Stats";
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Legacy />
       <Service />
       <Work />
+      <Stats />
       <Team />
       <ContactUs />
       <Footer />  
