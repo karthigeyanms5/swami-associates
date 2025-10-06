@@ -81,15 +81,15 @@ export default function TopNav() {
           <a href="#work" className="text-black hover:text-gray-700">
             Projects
           </a>
-          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a href="#blog" className="text-black   hover:text-gray-700">
             Services
           </a>
-          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a href="#about" className="text-black hover:text-gray-700">
             Why work with us
           </a>
-          <div className="bg-red-300 w-1 h-2 rounded-full mt-2"></div>
+          <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a
             href="mailto:swamiassociatesmtp@gmail.com"
             className="text-black hover:text-gray-700"
