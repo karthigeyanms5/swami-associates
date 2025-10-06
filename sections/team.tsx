@@ -47,7 +47,7 @@ const Team = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
-                        Our <span className="text-red-500">Builders</span>
+                        Our <span className="">Builders</span>
                     </h2>
                 </div>
 
