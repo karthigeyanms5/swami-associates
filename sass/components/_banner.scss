@@ -88,7 +88,7 @@
 
 .transition-image {
   position: absolute;
-  top: 0;
+  // top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -101,13 +101,13 @@
   }
   &.final {
     display: block;
-    top: -128px;
+    // top: -128px;
     position: relative;
-    width: 90%;
+    // width: 100%;
     margin: 0 auto;
     z-index: -100;
     @media (max-width: $layout-breakpoint-xsmall) {
-      top: -56px;
+      // top: -56px;
     }
     img {
       width: 100%;

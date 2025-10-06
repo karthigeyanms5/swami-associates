@@ -155,12 +155,9 @@ export default function Hero() {
   }, [loading]);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-6 pb-20 gap-16">
+    <div className=" items-center justify-items-center min-h-screen gap-16 top-0">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <motion.div
-          layout
-          // type='crossfade'
-        >
+        <motion.div layout type="crossfade">
           <AnimatePresence>
             {loading ? (
               <motion.div key="loader">
@@ -181,7 +178,10 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white inline-block " style={{ fontFamily: "var(--font-minion)" }}>
+                        <h1
+                          className="text-4xl md:text-6xl font-bold text-white inline-block "
+                          style={{ fontFamily: "var(--font-minion)" }}
+                        >
                           Swami Associates
                         </h1>
                       </div>
