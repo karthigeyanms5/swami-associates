@@ -67,7 +67,7 @@ const Team = () => {
                             </div>
                             <div className="p-2">
                                 <h3 className="text-lg font-bold text-gray-800">{member.name}</h3>
-                                <p className="text-gray-600 text-sm mt-1">{member.description}</p>
+                                <p className="text-red-600 text-sm mt-1">{member.description}</p>
                             </div>
                         </div>
                     ))}
