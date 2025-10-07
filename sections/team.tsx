@@ -54,7 +54,7 @@ const Team = () => {
                 {/* Team Cards */}
                 <div className="grid gap-8 md:grid-cols-3">
                     {teamMembers.map((member, index) => (
-                        <div className="relative overflow-hidden">
+                        <div className="relative overflow-hidden" key={member.id}>
                             <div
                                 key={member.id}
                                 className={` overflow-hidden transition-transform duration-300 rounded-xl group hover:scale-90`} // Card smaller on hover

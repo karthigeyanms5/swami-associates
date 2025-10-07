@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export const services = [
   { id: 1, title: "Design and Planning", image: "https://via.placeholder.com/200x100/FFFF00/000000" },
@@ -23,9 +24,10 @@ export default function Service() {
         <h2 className="text-3xl font-bold text-center mb-8">Our Service's</h2>
 
         {services.slice(0, 7).map((service) => (
-          <a
+          <Link
             href="mailto:swamiassociatesmtp@gmail.com"
             className="block w-full h-full"
+            key={service.id}
           >
             <motion.div
               key={service.id}
@@ -56,7 +58,7 @@ export default function Service() {
                 </span>
               </motion.div>
             </motion.div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
