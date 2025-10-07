@@ -2,24 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
+import { minionSerif, bahnschrift } from "@/app/fonts/fonts";
 
-const minionSerif = localFont({
-  src: [{
-    path: "./fonts/MinionPro-Regular.otf",
-    style: "normal",
-  },
-  {
-    path: "./fonts/MinionPro-MediumIt.otf",
-    style: "italic",
-  }
-  ],
-  variable: "--font-minion",
-});
 
-const bahnschrift = localFont({
-  src: "./fonts/bahnschrift.ttf",
-  variable: "--font-bahnschrift",
-});
 
 export const metadata: Metadata = {
   title: "Swami Associates",
@@ -56,8 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        style={{ fontFamily: "var(--font-bahnschrift)" }}
-        className={`${minionSerif.variable} ${bahnschrift.variable} antialiased`}
+        className={`${minionSerif.variable} ${bahnschrift.variable} font-bahnschrift  antialiased`}
       >
         {children}
         <MicrosoftClarity />
