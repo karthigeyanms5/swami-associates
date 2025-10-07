@@ -47,13 +47,14 @@ export default function Legacy() {
       }
     };
 
-    document.body.addEventListener("click", START, { once: true });
-
+    //document.body.addEventListener("click", START, { once: true });
+    window.addEventListener("load", START, { once: true });
     // Cleanup
     return () => {
       window.removeEventListener("mousemove", UPDATE);
       window.removeEventListener("deviceorientation", handleOrientation);
-      document.body.removeEventListener("click", START);
+      // document.body.removeEventListener("click", START);
+      window.removeEventListener("load", START);
     };
   }, []);
 
