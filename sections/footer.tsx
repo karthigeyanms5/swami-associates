@@ -75,7 +75,7 @@ const Footer = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="flex flex-wrap gap-8 w-full justify-center md:justify-start"            >
+              className="flex flex-wrap gap-8 w-full justify-center md:justify-start">
               <a
                 href="https://www.instagram.com/swamiassociates_mtp"
                 target="_blank"
@@ -101,10 +101,24 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
             </motion.div>
+
+            {/* Site By */}
+            <div className='block md:hidden w-full'>
+              <div className=' flex justify-center'>
+                <a href="https://akilesh.in/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className='font-light flex flex-col items-center'>
+                  Site By
+                  <img src="/akilesh.svg" alt="Akilesh Logo" className="w-10 mt-1" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Right Section */}
-          <div className="hidden md:flex flex-col items-start md:items-end space-y-14">            {/* Phone Numbers */}
+          <div className="hidden md:flex flex-col items-start md:items-end space-y-20">
+            {/* Phone Numbers */}
             <div className='flex flex-wrap flex-col '>
               <motion.a
                 href="tel:+919865619755"
@@ -136,6 +150,14 @@ const Footer = () => {
             >
               swamiassociatesmtp@gmail.com
             </motion.a>
+
+            {/* Site By */}
+            <a href="https://akilesh.in/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="flex items-center font-light w-full justify-center md:justify-end">
+              Site By <img src="/akilesh.svg" alt="Akilesh Logo" className="ml-2 w-10" />
+            </a>
           </div>
         </div>
       </div>
