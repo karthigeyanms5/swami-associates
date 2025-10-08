@@ -46,7 +46,7 @@ const Team = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-800">
                         Our <span className="">Builders</span>
                     </h2>
                 </div>

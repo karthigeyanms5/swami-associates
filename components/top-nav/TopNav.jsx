@@ -39,6 +39,15 @@ export default function TopNav() {
     },
   };
 
+  useEffect(() => {
+    console.log(
+      "%c ",
+      "font-size:250px;background:url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><text y='0.9em' font-size='8'>HI</text></svg>\") no-repeat",
+      "Design + Developed By Akilesh • https://www.akilesh.in",
+      "font-weight: bold; font-size: 16px;color: #00b894"
+    );
+  }, []);
+
   return (
     <div className="uppercase d-flex justify-end">
       {(isScrolled || isOpen) && (
@@ -80,10 +89,7 @@ export default function TopNav() {
             Why work with us
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
-          <a
-            href="#form"
-            className="text-black hover:text-gray-700"
-          >
+          <a href="#form" className="text-black hover:text-gray-700">
             Contact Us
           </a>
         </div>

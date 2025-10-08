@@ -172,14 +172,14 @@ export default function Hero() {
                         ease: [0.6, 0.01, -0.05, 0.9],
                         duration: 1.6,
                       }}
-                      src={`/images/image-1.png`}
+                      src={`/images/image-3.png`}
                       layoutId="main-image-1"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
                         <h1
-                          className="text-4xl md:text-6xl font-bold text-white inline-block "
+                          className="text-4xl md:text-6xl font-bold inline-block "
                           style={{ fontFamily: "var(--font-minion)" }}
                         >
                           Swami Associates
