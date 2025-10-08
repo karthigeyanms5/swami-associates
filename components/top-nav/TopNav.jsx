@@ -40,11 +40,17 @@ export default function TopNav() {
   };
 
   useEffect(() => {
+    const svg = `
+    <svg  xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 12'>
+      <path fill='white' d='M15.4654 2.93463C15.4763 4.03914 14.5848 4.44338 13.4803 4.45428C12.3758 4.46517 10.9765 4.08351 10.9656 2.979C10.9548 1.87448 12.3413 0.965337 13.4458 0.954446C14.5503 0.943555 15.4545 1.83011 15.4654 2.93463Z'/>
+      <path fill='white' d='M14.8779 4.9883C15.7377 4.99287 15.8339 5.55934 15.4507 6.32904C14.2087 8.82405 11.844 10.9713 8.08253 11.0084C4.58265 11.0429 3.07284 10.0577 2.06303 9.06763C1.05328 8.07754 -0.392745 5.17951 4.02358 5.0481C6.82622 4.96471 12.3728 4.97497 14.8779 4.9883Z'/>
+    </svg>`;
+
+    const encodedSvg = encodeURIComponent(svg.trim());
+
     console.log(
-      "%c ",
-      "font-size:250px;background:url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><text y='0.9em' font-size='8'>HI</text></svg>\") no-repeat",
-      "Design + Developed By Akilesh • https://www.akilesh.in",
-      "font-weight: bold; font-size: 16px;color: #00b894"
+      "%c    Design + Developed By Akilesh • https://www.akilesh.in",
+      `background:url("data:image/svg+xml,${encodedSvg}") no-repeat left; background-size:contain; font-weight: bold; font-size: 16px;color: #00b894`
     );
   }, []);
 
