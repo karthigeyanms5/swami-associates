@@ -12,13 +12,15 @@ import Service from "@/sections/service";
 import Footer from "@/sections/footer";
 import ContactUs from "@/components/ContactUs";
 import Stats from "@/sections/Stats";
+import ComingSoon from "@/sections/UnderConstruction";
 
 export default function Home() {
 
 
   return (
     <>
-      <header className="fixed top-0 z-50 w-full">
+      <ComingSoon />
+      {/* <header className="fixed top-0 z-50 w-full">
         <TopNav />
       </header>
       <Hero />
@@ -28,7 +30,7 @@ export default function Home() {
       <Stats />
       <Team />
       <ContactUs />
-      <Footer />
+      <Footer /> */}
       {/* Image revealed with rolling animation after scrolling */}
       {/* <Modal /> */}
     </>
