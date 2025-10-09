@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import TopNav from "@/components/top-nav/TopNav";
 import Modal from "@/components/Modal";
 
 import Hero from "@/sections/hero";
@@ -36,9 +35,6 @@ export default function Home() {
         <ComingSoon />
         :
         <>
-          <header className="fixed top-0 z-50 w-full">
-            <TopNav />
-          </header>
           <Hero />
           <Legacy />
           <Service />

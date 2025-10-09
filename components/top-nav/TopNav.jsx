@@ -57,22 +57,24 @@ export default function TopNav() {
   return (
     <div className="uppercase d-flex justify-end">
       {(isScrolled || isOpen) && (
-        <motion.img
-          src="/logo.svg" // Replace with your image URL
-          alt="Logo"
-          className="fixed top-2 left-4 w-12 h-12 z-50"
-          initial={{ opacity: 0, y: -50 }} // Start with opacity 0 and positioned above
-          animate={{
-            opacity: 1,
-            y: 0, // Move to original position when fully revealed
-          }}
-          transition={{
-            type: "spring", // Add spring animation
-            stiffness: 300, // Increase stiffness for a snappier motion
-            damping: 20, // Adjust damping for faster decay
-            duration: 0.5, // Reduce duration for faster reveal
-          }}
-        />
+        <a href="/">
+          <motion.img
+            src="/logo.svg" // Replace with your image URL
+            alt="Logo"
+            className="fixed top-2 left-4 w-12 h-12 z-50"
+            initial={{ opacity: 0, y: -50 }} // Start with opacity 0 and positioned above
+            animate={{
+              opacity: 1,
+              y: 0, // Move to original position when fully revealed
+            }}
+            transition={{
+              type: "spring", // Add spring animation
+              stiffness: 300, // Increase stiffness for a snappier motion
+              damping: 20, // Adjust damping for faster decay
+              duration: 0.5, // Reduce duration for faster reveal
+            }}
+          />
+        </a>
       )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
@@ -83,7 +85,7 @@ export default function TopNav() {
               transform: perspective(1000px) rotateX(-65deg);
             }
           `}</style> */}{" "}
-          <a href="#work" className="text-black hover:text-gray-700">
+          <a href="/works" className="text-black hover:text-gray-700">
             Projects
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>

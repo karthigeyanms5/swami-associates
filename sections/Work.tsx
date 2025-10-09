@@ -178,10 +178,12 @@ const Work: React.FC = () => {
           ))}
         </div>
       </a>
+      <div className="flex justify-center pt-7">
+        <SaButton text="View All Projects" link="/works" />
+      </div>
 
       {/* Button */}
-      <SaButton text="View All Projects" link="/works" />
-      <CircularButton />
+      {/* <CircularButton /> */}
     </section>
   );
 };

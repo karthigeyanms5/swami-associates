@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import { minionSerif, bahnschrift } from "@/app/fonts/fonts";
+import TopNav from "@/components/top-nav/TopNav";
 
 
 
@@ -40,6 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <header className="fixed top-0 z-50 w-full">
+        <TopNav />
+      </header>
+
       <body
         className={`${minionSerif.variable} ${bahnschrift.variable} font-bahnschrift  antialiased`}
       >
