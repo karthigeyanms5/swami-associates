@@ -73,7 +73,7 @@ export default function WorksPage() {
     });
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = (e: { currentTarget: { querySelector: (arg0: string) => any; }; }) => {
     const img = e.currentTarget.querySelector('img');
     const overlay = e.currentTarget.querySelector('.overlay');
     const info = e.currentTarget.querySelector('.info');
