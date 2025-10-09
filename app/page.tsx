@@ -15,24 +15,29 @@ import Stats from "@/sections/Stats";
 import ComingSoon from "@/sections/UnderConstruction";
 
 export default function Home() {
-
+  const [hash, setHash] = useState(window.location.hash)
 
   return (
     <>
-      <ComingSoon />
-      {/* <header className="fixed top-0 z-50 w-full">
-        <TopNav />
-      </header>
-      <Hero />
-      <Legacy />
-      <Service />
-      <Work />
-      <Stats />
-      <Team />
-      <ContactUs />
-      <Footer /> */}
-      {/* Image revealed with rolling animation after scrolling */}
-      {/* <Modal /> */}
+      {!hash ?
+        <ComingSoon />
+        :
+        <>
+          <header className="fixed top-0 z-50 w-full">
+            <TopNav />
+          </header>
+          <Hero />
+          <Legacy />
+          <Service />
+          <Work />
+          <Stats />
+          <Team />
+          <ContactUs />
+          <Footer />
+          {/* Image revealed with rolling animation after scrolling */}
+          {/* <Modal /> */}
+        </>
+      }
     </>
   );
 }
