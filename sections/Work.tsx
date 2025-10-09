@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SaButton from "@/components/SaButton";
+import { SaButton, CircularButton } from "@/components/SaButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,6 +181,7 @@ const Work: React.FC = () => {
 
       {/* Button */}
       <SaButton text="View All Projects" link="/works" />
+      <CircularButton />
     </section>
   );
 };

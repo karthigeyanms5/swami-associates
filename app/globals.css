@@ -11,6 +11,10 @@
   --foreground: #171717;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -32,6 +36,5 @@ body {
 }
 
 
-* {
-  scroll-behavior: smooth;
-}
+
+

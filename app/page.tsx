@@ -15,7 +15,20 @@ import Stats from "@/sections/Stats";
 import ComingSoon from "@/sections/UnderConstruction";
 
 export default function Home() {
-  const [hash, setHash] = useState(window.location.hash)
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHash(window.location.hash);
+
+      // Optional: update if hash changes
+      const handleHashChange = () => setHash(window.location.hash);
+      window.addEventListener("hashchange", handleHashChange);
+
+      return () => window.removeEventListener("hashchange", handleHashChange);
+    }
+  }, []);
+
 
   return (
     <>
