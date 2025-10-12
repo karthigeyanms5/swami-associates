@@ -128,7 +128,7 @@ export default function Service() {
         <h2 className="text-3xl font-bold text-center mb-8">Our Service's</h2>
         {services.map((service, index) => (
           <Link
-            href="mailto:swamiassociatesmtp@gmail.com"
+            href="/projects"
             className="block w-full h-full"
             key={service.id}
           >
