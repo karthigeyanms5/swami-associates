@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,8 +9,18 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
   const containerRef = useRef(null);
   const itemsRef = useRef<HTMLDivElement[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Dynamic works data - easily expandable
+  // Check if mobile on mount
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const projects = [
     { id: 1, title: 'Tropical Home', category: 'Residential' },
     { id: 2, title: 'Villa in Urban Context', category: 'Architecture' },
@@ -28,55 +38,49 @@ export default function Projects() {
     { id: 14, title: 'Luxury Estate', category: 'Residential' },
   ];
 
-  // Setup scroll animations with useGSAP
   useGSAP(() => {
     itemsRef.current.forEach((item, i) => {
       if (!item) return;
 
-      // Animate entrance as before
+      // Simpler entrance animation
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
-          start: 'top bottom-=100',
+          start: 'top bottom-=50',
           toggleActions: 'play none none reverse',
         },
-        y: 60,
+        y: isMobile ? 30 : 60,
         opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-        delay: (i % 3) * 0.1,
+        duration: isMobile ? 0.4 : 0.8,
+        ease: 'power2.out',
+        delay: isMobile ? 0 : (i % 3) * 0.1,
       });
 
-      // Mobile-specific color change
-      ScrollTrigger.create({
-        trigger: item,
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => {
-          if (window.innerWidth <= 768) {
+      // Mobile-specific color change with IntersectionObserver approach
+      if (isMobile) {
+        ScrollTrigger.create({
+          trigger: item,
+          start: 'top center+=100',
+          end: 'bottom center-=100',
+          onToggle: (self) => {
             const img = item.querySelector('img');
-            gsap.to(img, {
-              filter: 'grayscale(0%)',
-              duration: 0.5,
-              ease: 'power2.out',
-            });
-          }
-        },
-        onLeaveBack: () => {
-          if (window.innerWidth <= 768) {
-            const img = item.querySelector('img');
-            gsap.to(img, {
-              filter: 'grayscale(100%)',
-              duration: 0.5,
-              ease: 'power2.in',
-            });
-          }
-        },
-      });
+            if (self.isActive) {
+              img?.classList.remove('grayscale');
+              img?.classList.add('grayscale-0');
+            } else {
+              img?.classList.add('grayscale');
+              img?.classList.remove('grayscale-0');
+            }
+          },
+        });
+      }
     });
-  }, { scope: containerRef });
+  }, { scope: containerRef, dependencies: [isMobile] });
 
   const handleMouseEnter = (e: any) => {
+    // Skip hover effects on mobile
+    if (isMobile) return;
+
     const img = e.currentTarget.querySelector('img');
     const overlay = e.currentTarget.querySelector('.overlay');
     const info = e.currentTarget.querySelector('.info');
@@ -101,7 +105,9 @@ export default function Projects() {
     });
   };
 
-  const handleMouseLeave = (e: { currentTarget: { querySelector: (arg0: string) => any; }; }) => {
+  const handleMouseLeave = (e: any) => {
+    if (isMobile) return;
+
     const img = e.currentTarget.querySelector('img');
     const overlay = e.currentTarget.querySelector('.overlay');
     const info = e.currentTarget.querySelector('.info');
@@ -127,7 +133,7 @@ export default function Projects() {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen  py-20 px-6 mt-14">
+    <div ref={containerRef} className="min-h-screen py-20 px-6 mt-14">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-800 mb-4">
@@ -152,13 +158,13 @@ export default function Projects() {
               <img
                 src={`/images/image-${work.id}.png`}
                 alt={work.title}
-                className="w-full h-full object-cover transition-all duration-600"
-                style={{ filter: 'grayscale(100%)' }}
+                className="w-full h-full object-cover transition-all duration-600 grayscale"
+                loading="lazy"
               />
 
-              <div className="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0" />
+              <div className="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 pointer-events-none" />
 
-              <div className="info absolute bottom-0 left-0 right-0 p-6 translate-y-5 opacity-0">
+              <div className={`info absolute bottom-0 left-0 right-0 p-6 ${isMobile ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'} pointer-events-none`}>
                 <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-3">
                   {work.category}
                 </span>
@@ -166,6 +172,11 @@ export default function Projects() {
                   {work.title}
                 </h3>
               </div>
+              
+              {/* Mobile overlay - always visible */}
+              {isMobile && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
+              )}
             </div>
           ))}
         </div>
