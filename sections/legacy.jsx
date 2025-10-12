@@ -59,11 +59,11 @@ export default function Legacy() {
   }, []);
 
   return (
-    <section className="flex items-center md:items-stretch md:justify-start justify-center min-h-[100svh] m-0 p-2">
+    <section className="flex items-center md:items-stretch md:justify-start justify-center h-screen m-0 p-2">
       <div className={styles.build}>
         <div className={styles.assets}>
           <img
-            src="https://assets.codepen.io/605876/do-not-copy-osaka-sky.jpeg"
+            src="https://images.unsplash.com/photo-1558605331-5c7a86519aff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169"
             alt=""
           />
           <h3 className="hidden md:block">Legacy</h3>{" "}

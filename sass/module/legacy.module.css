@@ -9,46 +9,40 @@
 }
 
 .build {
-	width: 600px;
-	aspect-ratio: 2 / 1.1;
-	max-height: calc(100svh - 2rem);
-	max-height: 100vh;
-	position: relative;
-	overflow: hidden;
-/*	border-radius: 4em;*/
-/*	clip-path: inset(0 0 0 0 round 4em);*/
-	max-width: calc(100% - 2rem);
-
+    width: 100vw;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100%;
+    aspect-ratio: 16 / 6;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-@media(orientation: portrait) {
-    .build {
-        min-height: 330px;
-    }
-}
-
-.assets>img {
+.assets > img {
     position: absolute;
     top: 0;
-    left: 50%;
-    translate: -50% 0;
+    left: 0;
+    width: 100vw;
     height: 100%;
-    width: 660px;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center 43%;
     object-position: center 43%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+    translate: none;
+}
+
+.assets {
+    position: absolute;
+    inset: 0;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 .assets>img:first-of-type {
     filter: saturate(1.5) brightness(0.9);
-    -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
-    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
+    /* -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
+    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px)); */
 }
 
 .assets>img:last-of-type {
