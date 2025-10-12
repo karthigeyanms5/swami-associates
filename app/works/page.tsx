@@ -33,6 +33,7 @@ export default function WorksPage() {
     itemsRef.current.forEach((item, i) => {
       if (!item) return;
 
+      // Animate entrance as before
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
@@ -44,6 +45,33 @@ export default function WorksPage() {
         duration: 0.8,
         ease: 'power3.out',
         delay: (i % 3) * 0.1,
+      });
+
+      // Mobile-specific color change
+      ScrollTrigger.create({
+        trigger: item,
+        start: 'top center',
+        end: 'bottom center',
+        onEnter: () => {
+          if (window.innerWidth <= 768) {
+            const img = item.querySelector('img');
+            gsap.to(img, {
+              filter: 'grayscale(0%)',
+              duration: 0.5,
+              ease: 'power2.out',
+            });
+          }
+        },
+        onLeaveBack: () => {
+          if (window.innerWidth <= 768) {
+            const img = item.querySelector('img');
+            gsap.to(img, {
+              filter: 'grayscale(100%)',
+              duration: 0.5,
+              ease: 'power2.in',
+            });
+          }
+        },
       });
     });
   }, { scope: containerRef });
@@ -100,7 +128,7 @@ export default function WorksPage() {
 
   return (
     <div ref={containerRef} className="min-h-screen  py-20 px-6 mt-14">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-800 mb-4">
             Our Works
