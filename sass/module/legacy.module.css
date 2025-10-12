@@ -23,8 +23,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100%;
+    /* width: 100vw; */
+    /* height: 100%; */
     object-fit: cover;
     object-position: center 43%;
     user-select: none;
@@ -41,8 +41,8 @@
 
 .assets>img:first-of-type {
     filter: saturate(1.5) brightness(0.9);
-    /* -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
-    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px)); */
+    -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
+    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
 }
 
 .assets>img:last-of-type {
