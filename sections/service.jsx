@@ -216,14 +216,14 @@ export default function Service() {
           </motion.div>
           <motion.div
             ref={cursor}
-            className="w-20 h-20 rounded-full bg-[#455CE9] text-white fixed z-[3] flex items-center justify-center text-sm font-light pointer-events-none"
+            className="w-20 h-20 rounded-full bg-red-300 text-black fixed z-[3] flex items-center justify-center text-sm font-light pointer-events-none"
             variants={scaleAnimation}
             initial="initial"
             animate={active ? "enter" : "closed"}
           ></motion.div>
           <motion.div
             ref={cursorLabel}
-            className="w-20 h-20 rounded-full bg-transparent text-white fixed z-[3] flex items-center justify-center text-sm font-light pointer-events-none"
+            className="w-20 h-20 rounded-full bg-transparent text-black fixed z-[3] flex items-center justify-center text-sm font-light pointer-events-none"
             variants={scaleAnimation}
             initial="initial"
             animate={active ? "enter" : "closed"}
