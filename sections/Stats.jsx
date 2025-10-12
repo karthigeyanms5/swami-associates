@@ -41,32 +41,52 @@ export default function Stats() {
           <div className="transform transition-transform duration-300 hover:scale-105">
             <span
               ref={(el) => (statsRef.current[0] = el)}
-              data-target="120"
+              data-target="150"
               className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
             >
               0+
             </span>
             <p className="mt-3 text-lg text-red-500 font-medium">
-              Completed Buildings
+              Total projects
             </p>
           </div>
 
           <div className="transform transition-transform duration-300 hover:scale-105">
             <span
               ref={(el) => (statsRef.current[1] = el)}
-              data-target="250"
+              data-target="100"
               className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
             >
               0+
             </span>
-            <p className="mt-3 text-lg text-red-500 font-medium">
-              Completed Projects
-            </p>
+            <p className="mt-3 text-lg text-red-500 font-medium">Residence</p>
           </div>
+
+          {/* <div className="transform transition-transform duration-300 hover:scale-105">
+            <span
+              ref={(el) => (statsRef.current[2] = el)}
+              data-target="30"
+              className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
+            >
+              0+
+            </span>
+            <p className="mt-3 text-lg text-red-500 font-medium">Commercial</p>
+          </div> */}
+
+          {/* <div className="transform transition-transform duration-300 hover:scale-105">
+            <span
+              ref={(el) => (statsRef.current[3] = el)}
+              data-target="20"
+              className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
+            >
+              0+
+            </span>
+            <p className="mt-3 text-lg text-red-500 font-medium">other</p>
+          </div> */}
 
           <div className="transform transition-transform duration-300 hover:scale-105">
             <span
-              ref={(el) => (statsRef.current[2] = el)}
+              ref={(el) => (statsRef.current[4] = el)}
               data-target={new Date().getFullYear() - 1988}
               className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
             >
