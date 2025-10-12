@@ -140,7 +140,7 @@ const Work: React.FC = () => {
       </div>
 
       {/* Projects */}
-      <a href="/works">
+      <a href="/projects">
         <div
           ref={scrollContainerRef}
           className="flex flex-col md:flex-row gap-6 px-6 md:px-16 lg:px-24"
@@ -179,7 +179,7 @@ const Work: React.FC = () => {
         </div>
       </a>
       <div className="flex justify-center pt-7">
-        <SaButton text="View All Projects" link="/works" />
+        <SaButton text="View All Projects" link="/projects" />
       </div>
 
       {/* Button */}

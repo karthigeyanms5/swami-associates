@@ -96,7 +96,7 @@ export default function TopNav() {
               transform: perspective(1000px) rotateX(-65deg);
             }
           `}</style> */}{" "}
-          <a href="/works" className="text-black hover:text-gray-700">
+          <a href="/projects" className="text-black hover:text-gray-700">
             Projects
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>

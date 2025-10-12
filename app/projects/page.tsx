@@ -6,12 +6,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function WorksPage() {
+export default function Projects() {
   const containerRef = useRef(null);
   const itemsRef = useRef<HTMLDivElement[]>([]);
 
   // Dynamic works data - easily expandable
-  const works = [
+  const projects = [
     { id: 1, title: 'Tropical Home', category: 'Residential' },
     { id: 2, title: 'Villa in Urban Context', category: 'Architecture' },
     { id: 3, title: 'Weekend Getaway', category: 'Residential' },
@@ -139,7 +139,7 @@ export default function WorksPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {works.map((work, index) => (
+          {projects.map((work, index) => (
             <div
               key={work.id}
               ref={(el) => {
