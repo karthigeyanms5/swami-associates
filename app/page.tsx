@@ -9,9 +9,9 @@ import About from "@/sections/about";
 import Team from "@/sections/team";
 import Service from "@/sections/service";
 import Footer from "@/sections/footer";
-import ContactUs from "@/components/ContactUs";
 import Stats from "@/sections/Stats";
 import ComingSoon from "@/sections/UnderConstruction";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   const [hash, setHash] = useState("");
@@ -35,7 +35,7 @@ export default function Home() {
         <ComingSoon />
         :
         <>
-          <Hero />
+          {/* <Hero /> */}
           <Legacy />
           <Service />
           <Work />
