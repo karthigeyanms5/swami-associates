@@ -97,7 +97,7 @@ const Work: React.FC = () => {
       ScrollTrigger.create({
         trigger: section,
         start: "top top",
-        end: () => `+=${scrollWidth + 500}`,
+        end: () => `+=${scrollWidth + 300}`,
         pin: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
