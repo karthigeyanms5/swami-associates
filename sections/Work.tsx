@@ -6,6 +6,7 @@ import { SaButton, CircularButton } from "@/components/SaButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 type Project = {
   id: number;
   title: string;
@@ -22,6 +23,7 @@ const projects: Project[] = [
   { id: 6, title: "Modern Office", location: "Bangalore", image: "/work/kar.png" },
 ];
 
+
 const Work: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -29,6 +31,16 @@ const Work: React.FC = () => {
   const descRef = useRef<HTMLParagraphElement | null>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+  const displayedProjects = isDesktop ? projects : projects.slice(0, 3);
+
 
   useEffect(() => {
     // Check if desktop
@@ -145,7 +157,7 @@ const Work: React.FC = () => {
           ref={scrollContainerRef}
           className="flex flex-col md:flex-row gap-6 px-6 md:px-16 lg:px-24"
         >
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div
               key={project.id}
               ref={(el) => {
