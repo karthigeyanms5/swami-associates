@@ -134,7 +134,7 @@ export default function Legacy() {
             loading="lazy"
             decoding="async"
           />
-          <h3 className="hidden md:block">Legacy</h3>
+          <h3 className="hidden md:block">3D-WIZ</h3>
           <img
             className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
