@@ -66,25 +66,33 @@ export default function TopNav() {
   }, []);
 
   return (
-    <div className="uppercase d-flex justify-end">
+    <div className=" d-flex justify-end">
       {(isScrolled || isOpen) && (
-        <a href="/">
+        <a href="/" className="fixed top-2 left-4 z-50 flex items-center gap-2">
+          {/* Animated Logo Circle */}
           <motion.img
-            src="/logo.svg" // Replace with your image URL
+            src="/logo.svg"
             alt="Logo"
-            className="fixed top-2 left-4 w-12 h-12 z-50"
-            initial={{ opacity: 0, y: -50 }} // Start with opacity 0 and positioned above
-            animate={{
-              opacity: 1,
-              y: 0, // Move to original position when fully revealed
-            }}
+            className="w-12 h-12"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              type: "spring", // Add spring animation
-              stiffness: 300, // Increase stiffness for a snappier motion
-              damping: 20, // Adjust damping for faster decay
-              duration: 0.5, // Reduce duration for faster reveal
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              duration: 0.5,
             }}
           />
+
+          {/* Text Next to Logo */}
+          <div className="flex flex-col leading-tight">
+            <span className="uppercase text-sm sm:text-base font-medium text-black border-b-2 border-red-600 font-serif ">
+              Swami Associates
+            </span>
+            <span className="text-xs text-gray-600 pt-0.5 ml-auto">
+              Since 1988
+            </span>
+          </div>
         </a>
       )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
@@ -109,7 +117,7 @@ export default function TopNav() {
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a
-          href="#form"
+            href="#form"
             onClick={() => window.openAuthModal()}
             className="text-black hover:text-gray-700 pointer-events-auto"
           >
