@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "@/components/Modal";
 
 import Hero from "@/sections/hero";
+import HeroCarousel from "@/sections/HeroCarousel";
 import Legacy from "@/sections/legacy";
 import Work from "@/sections/Work";
 import About from "@/sections/about";
@@ -35,9 +36,10 @@ export default function Home() {
         <ComingSoon />
         :
         <>
-          {/* <Hero /> */}
-          <Legacy />
+          <Hero />
+          <HeroCarousel />
           <Service />
+          <Legacy />
           <Work />
           <Stats />
           <Team />
