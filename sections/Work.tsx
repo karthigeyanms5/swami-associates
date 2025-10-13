@@ -170,7 +170,7 @@ const Work: React.FC = () => {
                   src={project.image}
                   alt={project.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-1000 ease-out grayscale group-hover:grayscale-0 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-1000 ease-out   group-hover:scale-105"
                 />
 
                 {/* Dark overlay */}
