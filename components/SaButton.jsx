@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
-export default function SaButton({ text = "", link = "#" }) {
+export default function SaButton({ text = "" }) {
   const buttonRef = useRef(null);
   const plusRef = useRef(null);
 
@@ -37,30 +37,28 @@ export default function SaButton({ text = "", link = "#" }) {
   };
 
   return (
-    <a href={link} className="inline-block">
-      <button
-        ref={buttonRef}
-        onMouseEnter={handleEnter}
-        onMouseLeave={handleLeave}
-        className="flex items-center gap-2 font-medium tracking-wide text-black bg-transparent border-none outline-none"
-      >
-        {text}
-        <span ref={plusRef} className="w-4 text-red-500 leading-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 640"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="80"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="320" y1="120" x2="320" y2="520" />
-            <line x1="120" y1="320" x2="520" y2="320" />
-          </svg>
-        </span>
-      </button>
-    </a>
+    <button
+      ref={buttonRef}
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+      className="flex items-center gap-2 font-medium tracking-wide text-black bg-transparent border-none outline-none"
+    >
+      {text}
+      <span ref={plusRef} className="w-5 text-red-500 leading-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="80"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="320" y1="120" x2="320" y2="520" />
+          <line x1="120" y1="320" x2="520" y2="320" />
+        </svg>
+      </span>
+    </button>
   );
 }
 

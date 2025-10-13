@@ -191,7 +191,9 @@ const Work: React.FC = () => {
         </div>
       </a>
       <div className="flex justify-center pt-7">
-        <SaButton text="View All Projects" link="/projects" />
+        <a href="/projects" className="inline-block">
+          <SaButton text="View All Projects" />
+        </a>
       </div>
 
       {/* Button */}
