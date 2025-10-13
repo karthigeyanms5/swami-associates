@@ -80,8 +80,20 @@ export default function Legacy() {
         }
       };
 
+      const isMobile =
+        typeof window !== "undefined" &&
+        /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+
+        console.log("::::::::::::", isMobile);
+        
       // Add mouse move listener with passive flag
-      window.addEventListener("mousemove", UPDATE, { passive: true });
+      if (!isMobile) {
+        window.addEventListener("mousemove", UPDATE, { passive: true });
+      } else {
+        START();
+      }
 
       // Start orientation tracking on load
       if (document.readyState === "complete") {
