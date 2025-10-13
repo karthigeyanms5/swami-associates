@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import Modal from "@/components/Modal";
 
 import Hero from "@/sections/hero";
 import HeroCarousel from "@/sections/HeroCarousel";
@@ -46,7 +45,6 @@ export default function Home() {
           <ContactUs />
           <Footer />
           {/* Image revealed with rolling animation after scrolling */}
-          {/* <Modal /> */}
         </>
       }
     </>

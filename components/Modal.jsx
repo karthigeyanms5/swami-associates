@@ -1,22 +1,26 @@
-import React from "react";
-import { useEffect } from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Form } from "@/components/ContactUs";
+import SaButton from "./SaButton";
 
-export default function Modal(openAuthModal) {
-  var authAnimation;
+export default function Modal() {
+  const overlayRef = useRef(null);
+  const modalContentRef = useRef(null);
+  const animationRef = useRef(null);
 
   function openAuthModal() {
-    authAnimation = gsap
+    animationRef.current = gsap
       .timeline({ defaults: { ease: "power2.inOut" } })
-      .to("#authOverlay", {
+      .to(overlayRef.current, {
         scaleY: 0.01,
         x: 1,
         opacity: 1,
         display: "flex",
         duration: 0.4,
       })
-      .to("#authOverlay", {
+      .to(overlayRef.current, {
         scaleY: 1,
         background: "rgba(255,255,255,0.16)",
         duration: 0.6,
@@ -43,48 +47,72 @@ export default function Modal(openAuthModal) {
   }
 
   function closeAuthModal() {
-    authAnimation.reverse().timeScale(-1.6);
+    if (animationRef.current) {
+      animationRef.current.reverse().timeScale(-1.6);
+    }
   }
 
+  // Handle outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        overlayRef.current &&
+        modalContentRef.current &&
+        !modalContentRef.current.contains(event.target)
+      ) {
+        closeAuthModal();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Make globally accessible
+  useEffect(() => {
+    window.openAuthModal = openAuthModal;
+  }, []);
+
   return (
-    <>
+    <div
+      ref={overlayRef}
+      id="authOverlay"
+      className="fixed z-50 inset-0 flex items-center justify-center py-6 px-4 overflow-y-auto bg-white/80 backdrop-blur-sm scale-y-0 -translate-x-full opacity-0 origin-center"
+    >
       <div
-        id="authOverlay"
-        className="fixed z-10 left-0 top-0 h-full w-full flex items-center justify-center py-3 px-2 overflow-y-auto bg-white/80 backdrop-blur-sm scale-y-0 -translate-x-full opacity-0 origin-center"
+        ref={modalContentRef}
+        id="fourth"
+        className="relative w-full max-w-lg sm:max-w-xl md:max-w-2xl bg-white/0 border border-white/0 p-1 rounded-2xl shadow-sm"
       >
+        {/* Close Button */}
         <div
-          id="fourth"
-          className="bg-white/0 w-9/12 m-auto mb-0 sm:mb-auto p-1 border border-white/0 rounded-2xl shadow-sm "
+          onClick={closeAuthModal}
+          className="absolute top-4 right-4 rotate-45 z-10 cursor-pointer"
+          aria-label="Close modal"
+        >
+          <SaButton text="" />
+        </div>
+
+        <div
+          id="second"
+          className="bg-white p-4 sm:p-6 md:p-8 w-full rounded-xl shadow-sm scale-y-0 opacity-0"
         >
           <div
-            id="second"
-            className="bg-white p-4 sm:p-8 w-full rounded-xl shadow-sm scale-y-0 opacity-0"
+            id="third"
+            className="relative scale-y-0 opacity-0 flex flex-col items-center"
           >
-            <div
-              id="third"
-              className="relative scale-y-0 opacity-0 mx-auto flex justify-center"
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl text-gray-900 leading-snug mb-6 sm:mb-8 text-center"
+              style={{ fontFamily: "var(--font-minion)" }}
             >
-              <Form />
-
-              <div className="text-center">
-                <button
-                  onClick={closeAuthModal}
-                  className="bg-neutral-100 text-neutral-400 font-semibold text-xl rounded-md border-b-[3px] px-3 py-1"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
+              Get in touch with us.
+            </h2>
+            <Form />
           </div>
         </div>
       </div>
-
-      <button
-        onClick={openAuthModal}
-        className="bg-white text-cyan-400 font-semibold text-2xl rounded-md border-b-[3px] px-6 py-3 mt-16"
-      >
-        Open
-      </button>
-    </>
+    </div>
   );
 }

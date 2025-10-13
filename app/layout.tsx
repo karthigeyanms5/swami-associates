@@ -4,6 +4,7 @@ import "./globals.css";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import { minionSerif, bahnschrift } from "@/app/fonts/fonts";
 import TopNav from "@/components/top-nav/TopNav";
+import Modal from "@/components/Modal";
 
 
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           <TopNav />
         </header>
         {children}
+        <Modal />
         <MicrosoftClarity />
       </body>
     </html>
