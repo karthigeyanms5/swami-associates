@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import gsap from "gsap";
 import Image from "next/image";
@@ -140,11 +140,11 @@ export default function Service() {
                    : "bg-transparent text-gray-600 border-gray-300"
                }`}
               onMouseEnter={(e) => {
-                manageModal(true, index, e.clientX, e.clientY);
+                // manageModal(true, index, e.clientX, e.clientY);
                 setHoveredService(service.id);
               }}
               onMouseLeave={(e) => {
-                manageModal(false, index, e.clientX, e.clientY);
+                // manageModal(false, index, e.clientX, e.clientY);
                 setHoveredService(null);
               }}
               key={service.id}
