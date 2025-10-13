@@ -89,46 +89,62 @@
 // };
 
 // export default Hero; // Renamed export function
+
 "use client";
 import Image from "next/image";
 import saLogo from "@/public//logo.svg";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import { useEffect, useState } from "react";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import "../sass/main.scss";
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Loader from "../components/Loader";
 
+// export default function Home() {
+//   return (
+//     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+//       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+//         <Image
+//           className="dark:invert"
+//           src="https://swami-associates.in/logo.jpg"
+//           alt="Mettupalayam"
+//           width={180}
+//           height={38}
+//           priority
+//         />
+//         <div className="flex gap-4 items-center flex-col sm:flex-row">
+//           <a
+//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+//             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             <Image
+//               src={saLogo}
+//               alt="construction"
+//               width={20}
+//               height={20}
+//             />
+//             Swami
+//           </a>
+//           <a
+//             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+//             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             Associates
+//           </a>
+//         </div>
+//       </main>
+//     </div>
+//   );
+// }
+
 export default function Hero() {
   const [loading, setLoading] = useState(true);
-
-  // Carousel slides data
-  const slides = [
-    {
-      image: "/images/image-3.png",
-      title: "Swami Associates",
-      subtitle: "Since 1988",
-    },
-    {
-      image: "/images/image-1.png",
-      title: "Excellence in Service",
-      subtitle: "Trusted Partner",
-    },
-    {
-      image: "/images/image-2.png",
-      title: "Quality & Dedication",
-      subtitle: "Your Success",
-    },
-  ];
 
   useEffect(() => {
     if (loading) {
@@ -139,7 +155,7 @@ export default function Hero() {
   }, [loading]);
 
   return (
-    <div className="items-center justify-items-center min-h-screen gap-16 top-0">
+    <div className=" items-center justify-items-center min-h-screen gap-16 top-0">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <motion.div layout type="crossfade">
           <AnimatePresence>
@@ -150,54 +166,29 @@ export default function Hero() {
             ) : (
               <>
                 {!loading && (
-                  <div className="relative transition-image final w-full h-screen">
-                    <Swiper
-                      modules={[Navigation, Pagination, Autoplay, EffectFade]}
-                      spaceBetween={0}
-                      slidesPerView={1}
-                      navigation
-                      pagination={{ clickable: true }}
-                      autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
+                  <div className="relative transition-image final">
+                    <motion.img
+                      transition={{
+                        ease: [0.6, 0.01, -0.05, 0.9],
+                        duration: 1.6,
                       }}
-                      effect="fade"
-                      fadeEffect={{ crossFade: true }}
-                      speed={1000}
-                      loop={true}
-                      className="w-full h-full"
-                    >
-                      {slides.map((slide, index) => (
-                        <SwiperSlide key={index}>
-                          <div className="relative w-full h-full">
-                            <motion.img
-                              initial={{ scale: 1.1 }}
-                              animate={{ scale: 1 }}
-                              transition={{
-                                ease: [0.6, 0.01, -0.05, 0.9],
-                                duration: 1.6,
-                              }}
-                              src={slide.image}
-                              alt={slide.title}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                              <div className="relative inline-block">
-                                <h1
-                                  className="text-4xl md:text-6xl font-bold inline-block"
-                                  style={{ fontFamily: "var(--font-minion)" }}
-                                >
-                                  {slide.title}
-                                </h1>
-                              </div>
-                              <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
-                                {slide.subtitle}
-                              </p>
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
+                      src={`/images/image-3.png`}
+                      layoutId="main-image-1"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                      <div className="relative inline-block">
+                        <h1
+                          className="text-4xl md:text-6xl font-bold inline-block "
+                          style={{ fontFamily: "var(--font-minion)" }}
+                        >
+                          Swami Associates
+                        </h1>
+                      </div>
+                      <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
+                        Since 1988
+                      </p>
+                    </div>
                   </div>
                 )}
               </>
