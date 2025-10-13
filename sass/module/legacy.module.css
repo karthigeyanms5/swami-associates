@@ -41,13 +41,13 @@
 
 .assets>img:first-of-type {
     filter: saturate(1.5) brightness(0.9);
-    -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
-    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
+    /* -o-object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px));
+    object-position: calc(-50% + (var(--x) * 0px)) calc(43% + (var(--y) * -20px)); */
 }
 
 .assets>img:last-of-type {
-    -o-object-position: calc(-50% + (var(--x) * 40px)) calc(43% + (var(--y) * -40px));
-    object-position: calc(-50% + (var(--x) * 40px)) calc(43% + (var(--y) * -40px));
+    /* -o-object-position: calc(-50% + (var(--x) * 40px)) calc(43% + (var(--y) * -40px)); */
+    object-position: calc(50% + (var(--x) * 40px)) calc(10% +(var(--y) * 40px));
 }
 
 .assets h3 {
@@ -56,12 +56,12 @@
     top: 6%;
     margin: 0;
     font-size: 8rem;
-    translate: -50% 0;
     text-transform: uppercase;
     font-family: 'Bebas Neue', sans-serif;
     color: white;
-    translate: calc(-50% + (var(--x) * -30px)) calc(var(--y) * -20px);
+    translate: calc(-50% + (var(--x, 0) * -30px)) calc((var(--y, 0) * -20px));
 }
+
 
 .content {
     min-height: 32%;

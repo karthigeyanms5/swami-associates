@@ -124,7 +124,7 @@ export default function Legacy() {
           />
           <h3 className="hidden md:block">Legacy</h3>
           <img
-            className="sm:w-8/12 w-screen h-full "
+            className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
             src="/buildings/transparent-1.png"
             alt="Swami Associates Building"
