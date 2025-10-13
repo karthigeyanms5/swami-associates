@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { Form } from "@/components/ContactUs";
 
 export default function Modal(openAuthModal) {
   var authAnimation;
@@ -53,21 +54,17 @@ export default function Modal(openAuthModal) {
       >
         <div
           id="fourth"
-          className="bg-white/0 max-w-sm m-auto mb-0 sm:mb-auto p-3 border border-white/0 rounded-2xl shadow-sm"
+          className="bg-white/0 w-9/12 m-auto mb-0 sm:mb-auto p-1 border border-white/0 rounded-2xl shadow-sm "
         >
           <div
             id="second"
             className="bg-white p-4 sm:p-8 w-full rounded-xl shadow-sm scale-y-0 opacity-0"
           >
-            <div id="third" className="relative scale-y-0 opacity-0">
-              <h1 className="text-cyan-400 text-3xl font-bold mb-4 text-center">
-                Hello!
-              </h1>
-
-              <p className="text-center text-neutral-500/80 mb-4">
-                I am a modal open and close animation made with GSAP and
-                tailwindcss.
-              </p>
+            <div
+              id="third"
+              className="relative scale-y-0 opacity-0 mx-auto flex justify-center"
+            >
+              <Form />
 
               <div className="text-center">
                 <button
@@ -82,12 +79,12 @@ export default function Modal(openAuthModal) {
         </div>
       </div>
 
-      {/* <button
-          onClick={openAuthModal}
-          className="bg-white text-cyan-400 font-semibold text-2xl rounded-md border-b-[3px] px-6 py-3 mt-16"
-        >
-          Open
-        </button> */}
+      <button
+        onClick={openAuthModal}
+        className="bg-white text-cyan-400 font-semibold text-2xl rounded-md border-b-[3px] px-6 py-3 mt-16"
+      >
+        Open
+      </button>
     </>
   );
 }
