@@ -68,32 +68,35 @@ export default function TopNav() {
   return (
     <div className=" d-flex justify-end">
       {(isScrolled || isOpen) && (
-        <a href="/" className="fixed top-2 left-4 z-50 flex items-center gap-2">
-          {/* Animated Logo Circle */}
-          <motion.img
-            src="/logo.svg"
-            alt="Logo"
-            className="w-12 h-12"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 20,
-              duration: 0.5,
-            }}
-          />
+      <a
+        href="/"
+        className="fixed top-2 left-4 z-50 flex items-center gap-2 sm:gap-3 
+                  bg-white/0 rounded-md sm:rounded-none"
+      >
+        <motion.img
+          src="/logo.svg"
+          alt="Logo"
+          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 20,
+            duration: 0.5,
+          }}
+        />
 
-          {/* Text Next to Logo */}
-          <div className="flex flex-col leading-tight">
-            <span className="uppercase text-sm sm:text-base font-medium text-black border-b-2 border-red-600 font-serif ">
-              Swami Associates
-            </span>
-            <span className="text-xs text-gray-600 pt-0.5 ml-auto">
-              Since 1988
-            </span>
-          </div>
-        </a>
+        <div className="flex flex-col leading-tight justify-center">
+          <span className="uppercase text-sm sm:text-base font-medium text-black border-b-2 border-red-600 font-serif">
+            Swami Associates
+          </span>
+          <span className="text-[10px] sm:text-xs text-gray-600 pt-0.5 ml-auto">
+            Since 1988
+          </span>
+        </div>
+      </a>
+
       )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
