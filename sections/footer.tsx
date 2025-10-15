@@ -10,7 +10,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-black text-white py-20"> {/* Increased padding from py-10 to py-20 */}
+    <footer className="bg-black text-white py-12"> {/* Increased padding from py-10 to py-20 */}
       <div className="container mx-auto px-4 sm:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left Section */}
@@ -61,7 +61,8 @@ const Footer = () => {
             >
               {services.map((data) => (
                 <a
-                  href="mailto:swamiassociatesmtp@gmail.com"
+                  href="#form"
+                  onClick={() => window.openAuthModal()}
                   key={data.title}
                   className="border border-white text-white px-3 py-1 rounded-full hover:border-white hover:bg-white hover:text-black transition-all duration-300"
                 >
