@@ -5,7 +5,7 @@ import MicrosoftClarity from "@/components/MicrosoftClarity";
 import { minionSerif, bahnschrift } from "@/app/fonts/fonts";
 import TopNav from "@/components/top-nav/TopNav";
 import Modal from "@/components/Modal";
-
+import Footer from "@/sections/footer";
 
 
 export const metadata: Metadata = {
@@ -50,6 +50,8 @@ export default function RootLayout({
           <TopNav />
         </header>
         {children}
+        <Footer />
+
         <Modal />
         <MicrosoftClarity />
       </body>
