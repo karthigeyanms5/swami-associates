@@ -128,13 +128,28 @@ export default function Legacy() {
         <div className={styles.assets}>
           <img
             className="sm:w-full w-screen h-full"
-            src="https://images.unsplash.com/photo-1706858710254-dcec967b3d8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+            // src="https://images.unsplash.com/photo-1706858710254-dcec967b3d8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+            src="https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169"
             // src="https://images.unsplash.com/photo-1558605331-5c7a86519aff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169"
             alt="Swami Associates"
             loading="lazy"
             decoding="async"
           />
           <h3 className="hidden md:block">3D-WIZ</h3>
+                    {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                      <div className="relative inline-block">
+                        <h1
+                          className="text-4xl md:text-6xl font-bold inline-block "
+                          style={{ fontFamily: "var(--font-minion)" }}
+                        >
+                          Swami Associates
+                        </h1>
+                      </div>
+                      <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
+                        Since 1988
+                      </p>
+                    </div>
+     */}
           <img
             className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
