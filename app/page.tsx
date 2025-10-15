@@ -8,7 +8,6 @@ import Work from "@/sections/Work";
 import About from "@/sections/about";
 import Team from "@/sections/team";
 import Service from "@/sections/service";
-import Footer from "@/sections/footer";
 import Stats from "@/sections/Stats";
 import ComingSoon from "@/sections/UnderConstruction";
 import ContactUs from "@/components/ContactUs";
@@ -36,14 +35,13 @@ export default function Home() {
         :
         <>
           {/* <Hero /> */}
+          <Legacy />
           <HeroCarousel />
           <Service />
-          <Legacy />
           <Work />
           <Stats />
           <Team />
           <ContactUs />
-          <Footer />
           {/* Image revealed with rolling animation after scrolling */}
         </>
       }
