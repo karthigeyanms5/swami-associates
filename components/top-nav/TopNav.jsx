@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const iconVariants = {
     opened: {
@@ -39,6 +39,13 @@ export default function TopNav() {
     },
   };
 
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 180);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   useEffect(() => {
     const svg = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 12'>
@@ -66,38 +73,26 @@ export default function TopNav() {
   }, []);
 
   return (
-    <div className=" d-flex justify-end">
-      {(isScrolled || isOpen) && (
+    // <div className=" d-flex justify-end">
+    <div
+      className={`d-flex justify-end transition-all duration-500 ${
+        isScrolled
+          ? "bg-gradient-to-b from-white/50  to-transparent"
+          : "bg-transparent"
+      }`}
+    >
       <a
         href="/"
         className="fixed top-2 left-4 z-50 flex items-center gap-2 sm:gap-3 
                   bg-white/0 rounded-md sm:rounded-none"
       >
-        <motion.img
+        <img
           src="/logo.svg"
           alt="Logo"
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 20,
-            duration: 0.5,
-          }}
         />
-
-        <div className="flex flex-col leading-tight justify-center">
-          <span className="uppercase text-sm sm:text-base font-medium text-black border-b-2 border-red-600 font-serif">
-            Swami Associates
-          </span>
-          <span className="text-[10px] sm:text-xs text-gray-600 pt-0.5 ml-auto">
-            Since 1988
-          </span>
-        </div>
+      
       </a>
-
-      )}
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
         <div className="md:flex hidden space-x-4 p-4 ">
@@ -163,7 +158,7 @@ export default function TopNav() {
           variants={linkVariants}
         >
           <a
-            href="#work"
+            href="/projects"
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
@@ -215,9 +210,12 @@ export default function TopNav() {
           variants={linkVariants}
         >
           <a
-            href="mailto:swamiassociatesmtp@gmail.com"
+            href="#form"
             className="block w-full h-full"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              window.openAuthModal();
+            }}
           >
             Start Your Project
           </a>
