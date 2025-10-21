@@ -12,37 +12,37 @@ export const services = [
     id: 1,
     title: "Design and Planning",
     color: "#000000",
-    src: "/images/image-1.png",
+    src: "https://images.unsplash.com/photo-1712806375405-c666c772ea75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
   },
   {
     id: 2,
     title: "Construction",
     color: "#8C8C8C",
-    src: "/images/image-2.png",
+    src: "https://images.unsplash.com/photo-1590990536464-3324e285ae54?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
   },
   {
     id: 3,
     title: "Structural Design",
     color: "#B0B0B0",
-    src: "/images/image-3.png",
+    src: "https://images.unsplash.com/photo-1749984739767-afd0cb96c3cb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
   },
   {
     id: 4,
     title: "3D Elevations",
     color: "#D1D3D4",
-    src: "/images/image-4.png",
+    src: "https://images.unsplash.com/photo-1613152161890-52aa17add7c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
   },
   {
     id: 5,
     title: "Interior Design",
     color: "#8C8C8C",
-    src: "/images/image-5.png",
+    src: "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
   },
   {
     id: 6,
     title: "Approval Drawings",
     color: "#DCDCDC",
-    src: "/images/image-6.png",
+    src: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1152",
   },
   { id: 7, title: "Estimation", color: "#706D63", src: "/images/image-7.png" },
 ];
@@ -128,13 +128,11 @@ export default function Service() {
               >
                 <DotLottieReact src="/lottie/Abst.lottie" loop autoplay />
                 <p className="italic text-lg leading-relaxed mt-4">
-                  <span className="font-bold text-red-600">“QUALITY</span> is
-                  remembered long after the{" "}
-                  <span className="text-red-600 font-bold">
-                    price is forgotten”
-                  </span>
+                  <span className="text-red-600">“QUALITY</span> is remembered
+                  long after the{" "}
+                  <span className="text-red-600">price is forgotten”</span>
                 </p>
-                <p className="mt-2 font-semibold">– Aldo Gucci</p>
+                <p className="mt-2 font-light ">– Aldo Gucci</p>
               </motion.div>
             ) : (
               <motion.div
@@ -176,7 +174,7 @@ export default function Service() {
       {/* Right Section */}
       <div className="w-full max-w-2xl mx-auto md:mx-0">
         <h2 className="text-gray-900 mb-8 text-center md:text-left text-3xl md:text-4xl lg:text-5xl font-light leading-tight max-w-3xl">
-          OUR SERVICES
+          Our Services
         </h2>
 
         <ul>

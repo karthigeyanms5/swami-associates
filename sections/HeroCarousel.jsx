@@ -7,9 +7,10 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 const images = [
-  "/images/image-1.png",
-  "/images/image-2.png",
-  "/images/image-3.png",
+  "https://images.unsplash.com/photo-1748063578185-3d68121b11ff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
+  "https://images.unsplash.com/photo-1721274504214-152ec636efdb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
+  "https://images.unsplash.com/photo-1722858811780-6d1db9e8b710?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
 ];
 
 export default function HeroCarousel() {
