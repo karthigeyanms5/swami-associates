@@ -6,6 +6,10 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'swami-associates.in',
           },
+          {
+            protocol: 'https',
+            hostname: 'images.unsplash.com',
+          },
         ],
       },
 };
