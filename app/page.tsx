@@ -30,21 +30,21 @@ export default function Home() {
 
   return (
     <>
-      {!hash ?
+      {/* {!hash ?
         <ComingSoon />
-        :
-        <>
-          {/* <Hero /> */}
-          <Legacy />
-          <HeroCarousel />
-          <Service />
-          <Work />
-          <Stats />
-          <Team />
-          <ContactUs />
-          {/* Image revealed with rolling animation after scrolling */}
-        </>
-      }
+        : */}
+      <>
+        {/* <Hero /> */}
+        <Legacy />
+        <HeroCarousel />
+        <Service />
+        <Work />
+        <Stats />
+        <Team />
+        <ContactUs />
+        {/* Image revealed with rolling animation after scrolling */}
+      </>
+      {/* } */}
     </>
   );
 }
