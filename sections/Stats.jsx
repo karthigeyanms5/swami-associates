@@ -38,7 +38,7 @@ export default function Stats() {
     <section ref={sectionRef} className="bg-gray-200 py-16">
       <div className="max-w-5xl mx-auto text-center px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="transform transition-transform duration-300 hover:scale-105">
+          <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[0] = el)}
               data-target="150"
@@ -51,7 +51,7 @@ export default function Stats() {
             </p>
           </div>
 
-          <div className="transform transition-transform duration-300 hover:scale-105">
+          <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[1] = el)}
               data-target="100"
@@ -62,7 +62,7 @@ export default function Stats() {
             <p className="mt-3 text-lg text-red-500 font-medium">Residence</p>
           </div>
 
-          {/* <div className="transform transition-transform duration-300 hover:scale-105">
+          {/* <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[2] = el)}
               data-target="30"
@@ -73,7 +73,7 @@ export default function Stats() {
             <p className="mt-3 text-lg text-red-500 font-medium">Commercial</p>
           </div> */}
 
-          {/* <div className="transform transition-transform duration-300 hover:scale-105">
+          {/* <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[3] = el)}
               data-target="20"
@@ -84,7 +84,7 @@ export default function Stats() {
             <p className="mt-3 text-lg text-red-500 font-medium">other</p>
           </div> */}
 
-          <div className="transform transition-transform duration-300 hover:scale-105">
+          <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[4] = el)}
               data-target={new Date().getFullYear() - 1988}
