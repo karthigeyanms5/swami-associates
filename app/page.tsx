@@ -12,20 +12,32 @@ import Stats from "@/sections/Stats";
 import ComingSoon from "@/sections/UnderConstruction";
 import ContactUs from "@/components/ContactUs";
 
+import Lenis from 'lenis';
+
 export default function Home() {
   const [hash, setHash] = useState("");
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHash(window.location.hash);
-
-      // Optional: update if hash changes
-      const handleHashChange = () => setHash(window.location.hash);
-      window.addEventListener("hashchange", handleHashChange);
-
-      return () => window.removeEventListener("hashchange", handleHashChange);
+  useEffect( () => {
+    const lenis = new Lenis()
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
     }
-  }, []);
+
+    requestAnimationFrame(raf)
+  }, [])
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setHash(window.location.hash);
+
+  //     // Optional: update if hash changes
+  //     const handleHashChange = () => setHash(window.location.hash);
+  //     window.addEventListener("hashchange", handleHashChange);
+
+  //     return () => window.removeEventListener("hashchange", handleHashChange);
+  //   }
+  // }, []);
 
 
   return (
@@ -35,7 +47,14 @@ export default function Home() {
         : */}
       <>
         {/* <Hero /> */}
-        <Legacy />
+        <div
+          className='relative h-screen'
+          style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+        >
+          <div className='fixed top-0 h-screen w-full'>
+            <Legacy />
+          </div>
+        </div>
         <HeroCarousel />
         <Service />
         <Work />
