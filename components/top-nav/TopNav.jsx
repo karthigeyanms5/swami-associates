@@ -41,7 +41,7 @@ export default function TopNav() {
 
   // Detect scroll
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 180);
+    const handleScroll = () => setIsScrolled(window.scrollY > 350);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -91,7 +91,26 @@ export default function TopNav() {
           alt="Logo"
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
         />
-      
+        {(isScrolled || isOpen) && (
+          <motion.div
+            className="flex flex-col leading-tight justify-center"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              duration: 0.5,
+            }}
+          >
+            <span className="uppercase text-sm sm:text-base font-medium text-black border-b-2 border-red-600 font-serif">
+              Swami Associates
+            </span>
+            <span className="text-[10px] sm:text-xs text-gray-600 pt-0.5 ml-auto">
+              Since 1988
+            </span>
+          </motion.div>
+        )}
       </a>
       <header className="bg-transparent relative flex justify-end z-2 p-5 sm:p-0">
         {/* <div className="hidden md:flex space-x-4 p-4 sm:p-5 bg-white rounded-bl-lg slanted-header"> */}
