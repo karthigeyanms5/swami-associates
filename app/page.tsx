@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Hero from "@/sections/hero";
 import HeroCarousel from "@/sections/HeroCarousel";
@@ -9,36 +9,46 @@ import About from "@/sections/about";
 import Team from "@/sections/team";
 import Service from "@/sections/service";
 import Stats from "@/sections/Stats";
-import ComingSoon from "@/sections/UnderConstruction";
 import ContactUs from "@/components/ContactUs";
 
 import Lenis from 'lenis';
+import Snap from 'lenis/snap'
 
 export default function Home() {
-  const [hash, setHash] = useState("");
+  const legacyRef = useRef<HTMLDivElement>(null);
+  const heroCarouselRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
+  const teamRef = useRef<HTMLDivElement>(null);
 
-  useEffect( () => {
-    const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis({})
+    const snap = new Snap(lenis, {
+      type: "proximity",
+      distanceThreshold: "25%",
+    })
+
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
 
     requestAnimationFrame(raf)
+
+    // Add snap points for each section after they mount
+    setTimeout(() => {
+      if (legacyRef.current) snap.add(legacyRef.current.offsetTop);
+      if (heroCarouselRef.current) snap.add(heroCarouselRef.current.offsetTop);
+      if (serviceRef.current) snap.add(serviceRef.current.offsetTop);
+      if (workRef.current) snap.add(workRef.current.offsetTop);
+      if (teamRef.current) snap.add(teamRef.current.offsetTop);
+    }, 100);
+
+    // Cleanup
+    return () => {
+      lenis.destroy();
+    };
   }, [])
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setHash(window.location.hash);
-
-  //     // Optional: update if hash changes
-  //     const handleHashChange = () => setHash(window.location.hash);
-  //     window.addEventListener("hashchange", handleHashChange);
-
-  //     return () => window.removeEventListener("hashchange", handleHashChange);
-  //   }
-  // }, []);
-
 
   return (
     <>
@@ -48,6 +58,7 @@ export default function Home() {
       <>
         {/* <Hero /> */}
         <div
+          ref={legacyRef}
           className='relative h-screen'
           style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
@@ -55,11 +66,19 @@ export default function Home() {
             <Legacy />
           </div>
         </div>
-        <HeroCarousel />
-        <Service />
-        <Work />
+        <div ref={heroCarouselRef}>
+          <HeroCarousel />
+        </div>
+        <div ref={serviceRef}>
+          <Service />
+        </div>
+        <div ref={workRef}>
+          <Work />
+        </div>
         <Stats />
-        <Team />
+        <div ref={teamRef}>
+          <Team />
+        </div>
         <ContactUs />
         {/* Image revealed with rolling animation after scrolling */}
       </>
