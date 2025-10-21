@@ -63,46 +63,6 @@ const Work: React.FC = () => {
     if (!section || !scrollContainer) return;
 
     const ctx = gsap.context(() => {
-      // Title & description fade-in
-      gsap.from(titleRef.current, {
-        opacity: 0,
-        y: 60,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          once: true
-        },
-      });
-
-      gsap.from(descRef.current, {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          once: true
-        },
-      });
-
-      // Cards stagger fade in
-      gsap.from(cardsRef.current, {
-        opacity: 0,
-        y: 100,
-        stagger: 0.15,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 60%",
-          once: true,
-        },
-      });
-
       // Horizontal scroll - with proper cleanup
       const scrollWidth = scrollContainer.scrollWidth - window.innerWidth;
 
@@ -174,7 +134,7 @@ const Work: React.FC = () => {
                 />
 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-1000"></div>
+                <div className="absolute inset-0 duration-1000"></div>
 
                 {/* Text overlay - slides up on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-700">
