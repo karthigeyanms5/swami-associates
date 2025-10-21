@@ -45,7 +45,7 @@ export default function HeroCarousel() {
             <img
               src={src}
               alt={`Building ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover p-2 rounded-xl"
               loading="lazy"
               decoding="async"
             />
@@ -54,7 +54,7 @@ export default function HeroCarousel() {
       </Swiper>
 
       {/* Overlay content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 pointer-events-none">
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
         <h1 className="text-white text-5xl md:text-7xl font-bold uppercase font-sans tracking-wide">
           Swami Associates
         </h1>
