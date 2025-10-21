@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 type Project = {
-  id: number;
   title: string;
   location: string;
   image: string;
 };
 
+
 const projects: Project[] = [
-  { id: 1, title: "Saravanampatti", location: "Coimbatore", image: "/work/sr.jpg" },
-  { id: 2, title: "Marudur", location: "Coimbatore", image: "/work/trg.jpg" },
-  { id: 3, title: "Teachers Colony", location: "Mettupalaiyam", image: "/work/kar.png" },
-  { id: 4, title: "Downtown Complex", location: "Chennai", image: "/work/sr.jpg" },
-  { id: 5, title: "Luxury Villa", location: "Ooty", image: "/work/trg.jpg" },
-  { id: 6, title: "Modern Office", location: "Bangalore", image: "/work/kar.png" },
+  { title: "Teachers Colony", location: "Mettupalaiyam", image: "https://images.unsplash.com/photo-1682502524896-6d78b9e8413a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1183" },
+  { title: "Saravanampatti", location: "Coimbatore", image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000" },
+  { title: "Marudur", location: "Coimbatore", image: "https://images.unsplash.com/photo-1745761320791-5ae142edee8c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" },
+  { title: "Downtown Complex", location: "Chennai", image: "https://images.unsplash.com/photo-1709147617968-709368900af1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" },
+  { title: "Modern Office", location: "Bangalore", image: "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736" },
+  { title: "Luxury Villa", location: "Ooty", image: "https://images.unsplash.com/photo-1738920460703-58305d9e0c12?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1331" },
 ];
 
 
