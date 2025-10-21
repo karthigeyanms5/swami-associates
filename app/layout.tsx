@@ -42,10 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body
-        className={`${minionSerif.variable} ${bahnschrift.variable} font-bahnschrift  antialiased`}
-      >
+      <body className={`${minionSerif.variable} ${bahnschrift.variable} font-bahnschrift  antialiased`}>
         <header className="fixed top-0 z-50 w-full">
           <TopNav />
         </header>

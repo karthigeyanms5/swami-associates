@@ -6,6 +6,8 @@
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
+@import 'lenis/dist/lenis.css';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
