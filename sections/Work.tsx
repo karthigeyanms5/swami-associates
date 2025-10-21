@@ -119,7 +119,7 @@ const Work: React.FC = () => {
         >
           {displayedProjects.map((project, index) => (
             <div
-              key={project.id}
+              key={index}
               ref={(el) => {
                 cardsRef.current[index] = el;
               }}
