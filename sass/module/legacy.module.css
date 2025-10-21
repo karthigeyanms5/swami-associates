@@ -49,19 +49,43 @@
     /* -o-object-position: calc(-50% + (var(--x) * 40px)) calc(43% + (var(--y) * -40px)); */
     object-position: calc(50% + (var(--x) * 40px)) calc(10% +(var(--y) * 40px));
 }
-
 .assets h3 {
+    width: max-content;
     position: absolute;
     left: 50%;
     top: 6%;
     margin: 0;
-    font-size: 8rem;
-    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw, 5rem); /* responsive font size */
     font-family: 'Bebas Neue', sans-serif;
     color: white;
-    translate: calc(-50% + (var(--x, 0) * -30px)) calc((var(--y, 0) * -20px));
+    transform: translate(
+        calc(-50% + (var(--x, 0) * -3vw)),
+        calc((var(--y, 0) * -2vw))
+    );
 }
 
+.assets h5 {
+    position: absolute;
+    left: 50%;
+    top: 24%;
+    margin: 0;
+    font-size: clamp(1rem, 3vw, 2rem); /* responsive font size */
+    font-family: 'Bebas Neue', sans-serif;
+    color: red;
+    transform: translate(
+        calc(-50% + (var(--x, 0) * -3vw)),
+        calc((var(--y, 0) * -2vw))
+    );
+}
+
+@media (max-width: 768px) {
+    .assets h3 {
+        top: 4%;
+    }
+    .assets h5 {
+        top: 12%;
+    }
+}
 
 .content {
     min-height: 32%;
@@ -74,7 +98,7 @@
     place-items: center;
     align-content: center;
     padding-bottom: 0.5rem;
-    z-index: 2;
+    z-index: -1;
 }
 
 .content svg {

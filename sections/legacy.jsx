@@ -86,8 +86,6 @@ export default function Legacy() {
           navigator.userAgent
         );
 
-        console.log("::::::::::::", isMobile);
-        
       // Add mouse move listener with passive flag
       if (!isMobile) {
         window.addEventListener("mousemove", UPDATE, { passive: true });
@@ -135,8 +133,9 @@ export default function Legacy() {
             loading="lazy"
             decoding="async"
           />
-          <h3 className="hidden md:block">3D-WIZ</h3>
-                    {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <h3>Swami Associates</h3>
+          <h5> Since 1988</h5>
+          {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
                         <h1
                           className="text-4xl md:text-6xl font-bold inline-block "
