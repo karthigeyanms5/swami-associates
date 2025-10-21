@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -112,4 +112,94 @@ function CircularButton({ text = "Click", href = "#" }) {
   );
 }
 
-export { SaButton, CircularButton };
+function HoverProgressCircle({ isActive }) {
+  const circleRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const strokeWidth = 2.5;
+  const radius = 14;
+  const circumference = 2 * Math.PI * radius;
+
+  useEffect(() => {
+    const circle = circleRef.current;
+    const el = containerRef.current;
+
+    // Initial setup
+    gsap.set(circle, {
+      strokeDasharray: circumference,
+      strokeDashoffset: circumference,
+    });
+
+    // Hover enter
+    const handleEnter = () => {
+      gsap.to(circle, {
+        strokeDashoffset: 0,
+        duration: 0.4,
+        ease: "power2.inOut",
+      });
+    };
+
+    // Hover leave
+    const handleLeave = () => {
+      gsap.to(circle, {
+        strokeDashoffset: circumference,
+        duration: 0.4,
+        ease: "power2.inOut",
+      });
+    };
+
+    el.addEventListener("mouseenter", handleEnter);
+    el.addEventListener("mouseleave", handleLeave);
+
+    return () => {
+      el.removeEventListener("mouseenter", handleEnter);
+      el.removeEventListener("mouseleave", handleLeave);
+    };
+  }, [circumference]);
+
+  // React to parent "isActive" prop changes
+  useEffect(() => {
+    const circle = circleRef.current;
+    gsap.to(circle, {
+      strokeDashoffset: isActive ? 0 : circumference,
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+  }, [isActive, circumference]);
+  return (
+    <div
+      ref={containerRef}
+      className="w-6 h-6 flex items-center justify-center rounded-full transition-colors cursor-pointer"
+    >
+      <svg
+        className="w-6 h-6 -rotate-90"
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Background circle */}
+        <circle
+          cx="17"
+          cy="17"
+          r={radius}
+          stroke="#e5e7eb" // Tailwind gray-200
+          strokeWidth={strokeWidth}
+          fill="none"
+        />
+        {/* Animated progress circle */}
+        <circle
+          ref={circleRef}
+          cx="17"
+          cy="17"
+          r={radius}
+          stroke="#ef4444" // Tailwind red-500
+          strokeWidth={strokeWidth}
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+  );
+}
+
+export { SaButton, CircularButton, HoverProgressCircle };
