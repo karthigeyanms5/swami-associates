@@ -1,48 +1,38 @@
 "use client";
-import { services } from './service';
-import React from 'react';
-import { motion, useInView } from "framer-motion";
+import { services } from "./service";
+import React from "react";
 import { useRef } from "react";
 
 const Footer = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
 
   return (
-    <footer className="bg-black text-white py-12"> {/* Increased padding from py-10 to py-20 */}
+    <footer className="bg-black text-white py-12">
+      {" "}
+      {/* Increased padding from py-10 to py-20 */}
       <div className="container mx-auto px-4 sm:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left Section */}
           <div className="flex flex-col items-start space-y-14">
             {/* Logo */}
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 1 }}
-              className="flex items-center gap-4"
-            >
-              <motion.img
+            <div className="flex items-center gap-4">
+              <img
                 src="/logo.svg"
                 alt="swamiassociatesmtp"
                 className="w-16 h-16"
-                initial={{ x: -50, opacity: 0 }}
-                animate={isInView ? { x: 0, opacity: 1 } : {}}
-                transition={{ duration: 1 }}
               />
-              <motion.a
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 1, delay: 0.5 }}
+              <a
                 className="text-xl sm:text-4xl break-words"
                 style={{ fontFamily: "var(--font-minion)" }}
               >
                 Swami Associates
-              </motion.a>
-            </motion.div>
+              </a>
+            </div>
             <div className="md:hidden flex flex-col ">
-              <a href="mailto:swamiassociatesmtp@gmail.com" className="text-lg mb-2">
+              <a
+                href="mailto:swamiassociatesmtp@gmail.com"
+                className="text-lg mb-2"
+              >
                 swamiassociatesmtp@gmail.com
               </a>
               <a href="tel:+919865619755" className="text-lg">
@@ -53,12 +43,7 @@ const Footer = () => {
               </a>
             </div>
             {/* Our Sectors */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-wrap gap-2"
-            >
+            <div className="flex flex-wrap gap-2">
               {services.map((data) => (
                 <a
                   href="#form"
@@ -69,21 +54,32 @@ const Footer = () => {
                   {data.title}
                 </a>
               ))}
-            </motion.div>
+            </div>
 
             {/* Social Media Links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="flex flex-wrap gap-8 w-full justify-center md:justify-start">
+            <div className="flex flex-wrap gap-8 w-full justify-center md:justify-start">
               <a
                 href="https://www.instagram.com/swamiassociates_mtp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-instagram"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
               </a>
               <a
                 href="https://www.linkedin.com/in/swaminathan-a-614010a9/"
@@ -91,7 +87,22 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-linkedin"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
               </a>
               <a
                 href="https://www.facebook.com"
@@ -99,19 +110,38 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-facebook"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
               </a>
-            </motion.div>
+            </div>
 
             {/* Site By */}
-            <div className='block md:hidden w-full'>
-              <div className=' flex justify-center'>
-                <a href="https://akilesh.in/"
+            <div className="block md:hidden w-full">
+              <div className=" flex justify-center">
+                <a
+                  href="https://akilesh.in/"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className='font-light flex flex-col items-center'>
+                  className="font-light flex flex-col items-center"
+                >
                   Site By
-                  <img src="/akilesh.svg" alt="Akilesh Logo" className="w-10 mt-1" />
+                  <img
+                    src="/akilesh.svg"
+                    alt="Akilesh Logo"
+                    className="w-10 mt-1"
+                  />
                 </a>
               </div>
             </div>
@@ -120,8 +150,8 @@ const Footer = () => {
           {/* Right Section */}
           <div className="hidden md:flex flex-col items-start md:items-end space-y-20">
             {/* Phone Numbers */}
-            <div className='flex flex-wrap flex-col '>
-              <motion.a
+            <div className="flex flex-wrap flex-col ">
+              <a
                 href="tel:+919865619755"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -129,8 +159,8 @@ const Footer = () => {
                 className="text-xl hover:underline "
               >
                 +91 98656 19755
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="tel:+919842219755"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -138,11 +168,11 @@ const Footer = () => {
                 className="text-xl hover:underline"
               >
                 +91 98422 19755
-              </motion.a>
+              </a>
             </div>
 
             {/* Email */}
-            <motion.a
+            <a
               href="mailto:swamiassociatesmtp@gmail.com"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -150,14 +180,21 @@ const Footer = () => {
               className="text-xl sm:text-4xl break-words "
             >
               swamiassociatesmtp@gmail.com
-            </motion.a>
+            </a>
 
             {/* Site By */}
-            <a href="https://akilesh.in/"
+            <a
+              href="https://akilesh.in/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="flex items-center font-light w-full justify-center md:justify-end">
-              Site By <img src="/akilesh.svg" alt="Akilesh Logo" className="ml-2 w-10" />
+              className="flex items-center font-light w-full justify-center md:justify-end"
+            >
+              Site By{" "}
+              <img
+                src="/akilesh.svg"
+                alt="Akilesh Logo"
+                className="ml-2 w-10"
+              />
             </a>
           </div>
         </div>
