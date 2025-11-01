@@ -10,6 +10,7 @@ import Team from "@/sections/team";
 import Service from "@/sections/service";
 import Stats from "@/sections/Stats";
 import ContactUs from "@/components/ContactUs";
+import Preloader from "@/components/Preloader";
 
 import Lenis from 'lenis';
 import Snap from 'lenis/snap'
@@ -50,6 +51,8 @@ export default function Home() {
     };
   }, [])
 
+  const [showPreloader, setShowPreloader] = useState(true);
+
   return (
     <>
       {/* {!hash ?
@@ -57,6 +60,10 @@ export default function Home() {
         : */}
       <>
         {/* <Hero /> */}
+
+        {showPreloader && (
+          <Preloader onComplete={() => setShowPreloader(false)} />
+        )}
         <div
           ref={legacyRef}
           className='relative h-screen'
