@@ -152,7 +152,7 @@ export default function Legacy() {
           <img
             className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
-            src="/buildings/transparent-1.png"
+            src="/images/transparent-1.png"
             alt="Swami Associates Building"
             loading="lazy"
             decoding="async"
