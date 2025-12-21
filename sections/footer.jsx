@@ -177,7 +177,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-xl sm:text-4xl break-words "
+              className="text-xl sm:text-2xl break-words "
             >
               swamiassociatesmtp@gmail.com
             </a>
