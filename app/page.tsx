@@ -8,6 +8,7 @@ import Work from "@/sections/Work";
 import About from "@/sections/about";
 import Team from "@/sections/team";
 import Service from "@/sections/service";
+import WhyUs from "@/sections/WhyUs";
 import Stats from "@/sections/Stats";
 import ContactUs from "@/components/ContactUs";
 import Preloader from "@/components/Preloader";
@@ -82,6 +83,7 @@ export default function Home() {
         <div ref={workRef}>
           <Work />
         </div>
+        <WhyUs />
         <Stats />
         <div ref={teamRef}>
           <Team />
