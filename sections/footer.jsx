@@ -15,18 +15,24 @@ const Footer = () => {
           {/* Left Section */}
           <div className="flex flex-col items-start space-y-14">
             {/* Logo */}
-            <div className="flex items-center gap-4">
+            <div className="flex  gap-4">
               <img
                 src="/logo.svg"
                 alt="swamiassociatesmtp"
                 className="w-16 h-16"
               />
+              <div>
               <a
                 className="text-xl sm:text-4xl break-words"
                 style={{ fontFamily: "var(--font-minion)" }}
               >
                 Swami Associates
               </a>
+              <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
+                CRK Building, Bus Stand, 2B, Annaji Rao Rd, above Paradise Bakery, near
+                Mettupalayam, Mettupalayam, Tamil Nadu 641301
+              </p>  
+              </div>
             </div>
             <div className="md:hidden flex flex-col ">
               <a
