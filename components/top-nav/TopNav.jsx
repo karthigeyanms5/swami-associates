@@ -125,8 +125,8 @@ export default function TopNav() {
             Projects
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
-          <a href="#blog" className="text-black   hover:text-gray-700">
-            Services
+          <a href="https://blog.swami-associates.in/" target="_blank" className="text-black   hover:text-gray-700">
+           Blog 
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a href="#about" className="text-black hover:text-gray-700">
