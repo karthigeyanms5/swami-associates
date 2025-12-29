@@ -1,22 +1,3 @@
-export function Chai() {
-
-    return (
-        <section>
-            <h1>Team Members</h1>
-            <h3>
-                ER. SWAMINATHAN A.,DCE(CIVIL) Licensed Building Surveyor/Civil Engineer
-            </h3>
-            <h3>
-                AR. KARTHIGEYAN M S., B.ARCH Licensed Architect
-            </h3>
-            <h3>
-                ER. RITIGA M S., B.E(CIVIL), M.E(STRUCTURAL) Structural Engineer
-            </h3>
-        </section>
-    )
-}
-
-
 import React from "react";
 
 const teamMembers = [
@@ -24,19 +5,19 @@ const teamMembers = [
         id: 1,
         name: "Er.Swaminathan.A",
         description: "Managing Director",
-        image: "team/swami.jpg", // Replace with actual image URL
+        image: "team/swami.jpg",
     },
     {
         id: 2,
         name: "Er. Ritiga M S",
         description: "Structural Engineer",
-        image: "team/ritiga.jpg", // Replace with actual image URL
+        image: "team/ritiga.jpg",
     },
     {
         id: 3,
         name: "Ar.Karthigeyan M S",
         description: "Architect / Design Consultant",
-        image: "team/karti.jpg", // Replace with actual image URL
+        image: "team/karti.jpg",
     },
 ];
 
@@ -47,7 +28,7 @@ const Team = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-800">
-                        Our <span className="">Builders</span>
+                        Our <span className="">Team</span>
                     </h2>
                 </div>
 
