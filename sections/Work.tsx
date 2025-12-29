@@ -96,11 +96,14 @@ const Work: React.FC = () => {
       {/* Header */}
       <div className="px-6 md:px-16 lg:px-24 mb-10 max-w-7xl mx-auto">
         <div ref={titleRef}>
-          <p className="text-red-500 text-sm md:text-base font-medium tracking-widest uppercase mb-4">
-            ARCHITECTURE SERVICES
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight max-w-3xl">
-            Create functional and stylish modern buildings for you.
+          {/* <p className="text-red-500 text-sm md:text-base font-medium tracking-widest uppercase mb-4"> */}
+          {/*   ARCHITECTURE SERVICES */}
+          {/* </p> */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight max-w-4xl">
+            <span className="text-red-600">We strive</span> to create functional and modern
+            <br className="hidden sm:block" />
+            buildings with{" "}
+            <span className="text-red-600">sheer quality</span>
           </h2>
         </div>
         <p
