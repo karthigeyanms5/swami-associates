@@ -117,7 +117,9 @@ export default function Service() {
       <div className="max-w-5xl w-full flex flex-col items-center text-center relative">
         <div className="mb-6 relative h-[400px] flex items-center justify-center">
           <AnimatePresence mode="wait">
-            {!modal.active ? (
+            {/* TODO:  dissabale true and activate and !modal.active condtion to make left card update */}
+            {/* {!modal.active ? ( */}
+            {true ? (
               <motion.div
                 key="lottie"
                 variants={fadeInOut}
