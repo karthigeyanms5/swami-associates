@@ -41,7 +41,7 @@ export default function HeroCarousel() {
   const circumference = 2 * Math.PI * circleRadius;
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[320px] sm:h-[420px] md:h-screen overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
@@ -66,11 +66,11 @@ export default function HeroCarousel() {
       </Swiper>
 
       {/* Overlay content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <h1 className="text-white text-5xl md:text-7xl font-bold uppercase font-sans tracking-wide">
-          Swami Associates
-        </h1>
-      </div>
+      {/* <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"> */}
+      {/*   <h1 className="text-white text-5xl md:text-7xl font-bold uppercase font-sans tracking-wide"> */}
+      {/*     Swami Associates */}
+      {/*   </h1> */}
+      {/* </div> */}
 
       {/* Circle Progress Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
