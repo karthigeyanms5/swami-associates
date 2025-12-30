@@ -29,8 +29,8 @@ const Footer = () => {
                 SWAMI ASSOCIATES
               </a>
               <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
-                2B CRK Buildings, Annaji Rao Rd, above Paradise Bakery, near
-                Mettupalayam Bus stand, Mettupalayam, Coimbatore 641301.
+                2B CRK Buildings, Annaji Rao Road, above Paradise Bakery, near
+                Mettupalayam Bus stand, Mettupalayam, Coimbatore-641301.
               </p>  
               </div>
             </div>
