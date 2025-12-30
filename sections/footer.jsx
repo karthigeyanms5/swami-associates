@@ -29,8 +29,8 @@ const Footer = () => {
                 Swami Associates
               </a>
               <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
-                CRK Building, Bus Stand, 2B, Annaji Rao Rd, above Paradise Bakery, near
-                Mettupalayam, Mettupalayam, Tamil Nadu 641301
+                2B CRK Buildings, Annaji Rao Rd, above Paradise Bakery, near
+                Mettupalayam Bus stand, Mettupalayam, Tamil Nadu 641301.
               </p>  
               </div>
             </div>
