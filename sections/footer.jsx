@@ -26,7 +26,7 @@ const Footer = () => {
                 className="text-xl sm:text-4xl break-words"
                 style={{ fontFamily: "var(--font-minion)" }}
               >
-                Swami Associates
+                SWAMI ASSOCIATES
               </a>
               <p className="mt-2 text-xs sm:text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
                 2B CRK Buildings, Annaji Rao Rd, above Paradise Bakery, near
