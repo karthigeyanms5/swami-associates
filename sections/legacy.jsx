@@ -135,6 +135,7 @@ export default function Legacy() {
           {/* /> */}
           <h3>Swami Associates</h3>
           <h5>Since 1988</h5>
+          <h5>Architecture| Engineering | Construction</h5>
           {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
                         <h1
@@ -148,6 +149,8 @@ export default function Legacy() {
                         Since 1988
                       </p>
                     </div>
+                     <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
+                        Architecture| Engineering | Construction
      */}
           <img
             className="w-screen h-screen md:h-auto"
