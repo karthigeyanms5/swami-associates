@@ -149,7 +149,7 @@ export default function Legacy() {
                         Since 1988
                       </p>
                     </div>
-                     <p className="mt-6 text-red-600 text-2xl md:text-5xl font-medium">
+                     <p className="mt-6 text-red-600 text-2xl md:text-4xl font-medium">
                         Architecture| Engineering | Construction
      */}
           <img
