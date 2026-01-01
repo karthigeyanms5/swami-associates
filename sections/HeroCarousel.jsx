@@ -46,7 +46,7 @@ export default function HeroCarousel() {
         modules={[Autoplay, EffectFade]}
         effect="fade"
         loop={true}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         slidesPerView={1}
         className="w-full h-full"
         onSwiper={setSwiperInstance}
@@ -142,7 +142,7 @@ export default function HeroCarousel() {
         }
 
         .animate-progress {
-          animation: progress 4s linear forwards;
+          animation: progress 2s linear forwards;
         }
       `}</style>
     </section>
