@@ -190,7 +190,7 @@ export default function TopNav() {
           variants={linkVariants}
         >
           <a
-            href="#work"
+            href="#services"
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
@@ -205,7 +205,10 @@ export default function TopNav() {
           <a
             href="#work"
             className="block w-full h-full"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              window.openAuthModal();
+            }}
           >
             Contact Us
           </a>
@@ -216,7 +219,7 @@ export default function TopNav() {
           variants={linkVariants}
         >
           <a
-            href="#work"
+            href="#why-us"
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >

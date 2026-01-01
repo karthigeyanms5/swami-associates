@@ -112,6 +112,7 @@ export default function Service() {
     <div
       className="flex flex-col md:flex-row justify-between items-center bg-white py-12 px-8 gap-8"
       onMouseMove={(e) => moveModal(e.clientX, e.clientY)}
+      id="services"
     >
       {/* Left Section */}
       <div className="max-w-5xl w-full flex flex-col items-center text-center relative">
