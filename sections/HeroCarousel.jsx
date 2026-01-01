@@ -19,10 +19,10 @@ const images = [
   "/slider/giri_brindha_residence.png",
   "/slider/kanaraj_residence.png",
   "/slider/gv_international.png",
-  "/slider/srm.png",
   "/slider/living_room.png",
   "/slider/trg_ramesh.png",
-  "/slider/eye_foundation.png",
+  "/slider/geethalaiyam_starcase.png",
+  "/slider/srm.png",
   // "/slider/geethalayam_residence.png",
   // "/slider/padbanaban_residence.png",
 ];
