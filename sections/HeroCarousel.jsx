@@ -19,9 +19,11 @@ const images = [
   "/slider/giri_brindha_residence.png",
   "/slider/kanaraj_residence.png",
   "/slider/gv_international.png",
+  "/slider/srm.png",
   "/slider/living_room.png",
-  "/slider/geethalayam_residence.png",
-  "/slider/padbanaban_residence.png",
+  "/slider/eye_foundation.png",
+  // "/slider/geethalayam_residence.png",
+  // "/slider/padbanaban_residence.png",
 ];
 
 export default function HeroCarousel() {
