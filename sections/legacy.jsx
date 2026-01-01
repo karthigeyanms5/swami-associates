@@ -136,22 +136,24 @@ export default function Legacy() {
           <h3>Swami Associates</h3>
           <h5>Since 1988</h5>
           <h5>Architecture| Engineering | Construction</h5>
-          {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                      <div className="relative inline-block">
-                        <h1
-                          className="text-4xl md:text-6xl font-bold inline-block "
-                          style={{ fontFamily: "var(--font-minion)" }}
-                        >
-                          Swami Associates
-                        </h1>
-                      </div>
-                      <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
-                        Since 1988
-                      </p>
-                    </div>
-                     <p className="mt-6 text-red-600 text-2xl md:text-4xl font-medium">
-                        Architecture| Engineering | Construction
-     */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-4">
+  
+  <h1
+    className="text-4xl md:text-6xl font-bold"
+    style={{ fontFamily: "var(--font-minion)" }}
+  >
+    Swami Associates
+  </h1>
+
+  <p className="text-red-600 text-lg md:text-2xl font-medium">
+    Since 1988
+  </p>
+
+  <p className="text-red-600 text-base md:text-xl font-medium tracking-wide">
+    Architecture | Engineering | Construction
+  </p>
+
+</div>
           <img
             className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
