@@ -21,6 +21,7 @@ const images = [
   "/slider/gv_international.png",
   "/slider/srm.png",
   "/slider/living_room.png",
+  "/slider/trg_ramesh.png",
   "/slider/eye_foundation.png",
   // "/slider/geethalayam_residence.png",
   // "/slider/padbanaban_residence.png",
