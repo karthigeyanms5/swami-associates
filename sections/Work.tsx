@@ -15,12 +15,12 @@ type Project = {
 
 
 const projects: Project[] = [
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/kanaraj_residence.png" },
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/gv_international.png" },
   { title: "Marudur", location: "Coimbatore", image: "/slider/rsr_srinvasan.png" },
   { title: "Luxury Villa", location: "Ooty", image: "/slider/krg_sampath.png" },
   { title: "Teachers Colony", location: "Mettupalaiyam", image: "/slider/sakthi_hospital.png" },
   { title: "Saravanampatti", location: "Coimbatore", image: "/slider/eye_foundation.png" },
-  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/gv_international.png" },
-  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/kanaraj_residence.png" },
   // { title: "Saravanampatti", location: "Coimbatore", image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000" },
   // { title: "Downtown Complex", location: "Chennai", image: "https://images.unsplash.com/photo-1709147617968-709368900af1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" },
   { title: "Modern Office", location: "Bangalore", image: "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736" },
@@ -143,7 +143,7 @@ const Work: React.FC = () => {
                 <div className="absolute inset-0 duration-1000"></div>
 
                 {/* Text overlay - slides up on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-700">
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                   <h3 className="text-2xl md:text-3xl font-light text-white mb-2">
                     {project.title}
                   </h3>

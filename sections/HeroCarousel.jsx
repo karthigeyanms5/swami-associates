@@ -12,19 +12,16 @@ import "swiper/css/effect-fade";
 //  "https://images.unsplash.com/photo-1721274504214-152ec636efdb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
 //  "https://images.unsplash.com/photo-1722858811780-6d1db9e8b710?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1946",
 //];
-//
 
-const images = [
-  "/slider/enterence.png",
-  "/slider/giri_brindha_residence.png",
-  "/slider/kanaraj_residence.png",
-  "/slider/gv_international.png",
-  "/slider/living_room.png",
-  "/slider/trg_ramesh.png",
-  "/slider/geethalaiyam_starcase.png",
-  "/slider/srm.png",
-  // "/slider/geethalayam_residence.png",
-  // "/slider/padbanaban_residence.png",
+const projects = [
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/enterence.png" },
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/giri_brindha_residence.png" },
+  { title: "Marudur", location: "Coimbatore", image: "/slider/kanaraj_residence.png" },
+  { title: "Luxury Villa", location: "Ooty", image: "/slider/gv_international.png" },
+  { title: "Teachers Colony", location: "Mettupalaiyam", image: "/slider/living_room.png" },
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/trg_ramesh.png" },
+  { title: "Modern Office", location: "Bangalore", image: "/slider/geethalaiyam_starcase.png" },
+  { title: "Modern Office", location: "Bangalore", image: "/slider/srm.png" },
 ];
 
 export default function HeroCarousel() {
@@ -55,15 +52,23 @@ export default function HeroCarousel() {
         onSwiper={setSwiperInstance}
         onSlideChange={handleSlideChange}
       >
-        {images.map((src, index) => (
+        {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <img
-              src={src}
+              src={project.image}
               alt={`Building ${index + 1}`}
               className="w-full h-full object-cover p-2 rounded-xl"
               loading="lazy"
               decoding="async"
             />
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm md:text-base">
+                    {project.location}
+                  </p>
+                </div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -77,7 +82,7 @@ export default function HeroCarousel() {
 
       {/* Circle Progress Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
-        {images.map((_, index) => {
+        {projects.map((_, index) => {
           const isActive = activeIndex === index;
           return (
             <button
