@@ -136,8 +136,8 @@ export default function Legacy() {
           <h3>Swami Associates</h3>
           <h5>Since 1988</h5>
           <h5>Architecture| Engineering | Construction</h5>
-           {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-  
+           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+
   <div className="relative inline-block">
     <h1
       className="text-4xl md:text-6xl font-bold inline-block"
@@ -155,7 +155,7 @@ export default function Legacy() {
     Architecture | Engineering | Construction
   </p>
 
-</div> */}
+</div>
           <img
             className="w-screen h-screen md:h-auto"
             // src="https://assets.codepen.io/605876/do-not-copy-osaka-tower.png"
