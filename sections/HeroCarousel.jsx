@@ -14,14 +14,14 @@ import "swiper/css/effect-fade";
 //];
 
 const projects = [
-  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/enterence.png" },
-  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/giri_brindha_residence.png" },
-  { title: "Marudur", location: "Coimbatore", image: "/slider/kanaraj_residence.png" },
-  { title: "Luxury Villa", location: "Ooty", image: "/slider/gv_international.png" },
-  { title: "Teachers Colony", location: "Mettupalaiyam", image: "/slider/living_room.png" },
-  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/trg_ramesh.png" },
-  { title: "Modern Office", location: "Bangalore", image: "/slider/geethalaiyam_starcase.png" },
-  { title: "Modern Office", location: "Bangalore", image: "/slider/srm.png" },
+  { title: "Residence@", location: "Mettupalayam ", image: "/slider/enterence.png" },
+  { title: "GV Residence@", location: "Mettupalayam", image: "/slider/giri_brindha_residence.png" },
+  { title: "Mr.kanagaraj Residence", location: "Karamadai", image: "/slider/kanaraj_residence.png" },
+  { title: "Hotel GV international", location: "Mettupalayam", image: "/slider/gv_international.png" },
+  { title: "Residence@", location: "Mettupalayam", image: "/slider/living_room.png" },
+  { title: "Mr.Ramesh Residence", location: "Karamadai", image: "/slider/trg_ramesh.png" },
+  { title: "Geethalayam", location: "Karamadai", image: "/slider/geethalaiyam_starcase.png" },
+  { title: "SRM complex", location: "Mettupalayam", image: "/slider/srm.png" },
 ];
 
 export default function HeroCarousel() {
