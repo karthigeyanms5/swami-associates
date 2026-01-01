@@ -124,17 +124,17 @@ export default function Legacy() {
     >
       <div className={styles.build}>
         <div className={styles.assets}>
-          <img
-            className="sm:w-full w-screen h-full"
-            // src="https://images.unsplash.com/photo-1706858710254-dcec967b3d8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            src="https://github.com/karthigeyanms5/swami-associates/blob/890fe3f7fcc852220349428775b6aa2be8bf17f3/public/images/giri_brindha_residence.png"
-            // src="https://images.unsplash.com/photo-1558605331-5c7a86519aff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169"
-            alt="Swami Associates"
-            loading="lazy"
-            decoding="async"
-          />
+          {/* <img */}
+          {/*   className="sm:w-full w-screen h-full" */}
+          {/*   // src="https://images.unsplash.com/photo-1706858710254-dcec967b3d8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" */}
+          {/*   src="https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169" */}
+          {/*   // src="https://images.unsplash.com/photo-1558605331-5c7a86519aff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169" */}
+          {/*   alt="Swami Associates" */}
+          {/*   loading="lazy" */}
+          {/*   decoding="async" */}
+          {/* /> */}
           <h3>Swami Associates</h3>
-          <h5> Since 1988</h5>
+          <h5>Since 1988</h5>
           {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                       <div className="relative inline-block">
                         <h1

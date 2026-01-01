@@ -57,7 +57,7 @@
     margin: 0;
     font-size: clamp(2rem, 5vw, 5rem); /* responsive font size */
     font-family: 'Bebas Neue', sans-serif;
-    color: white;
+    color: black;
     transform: translate(
         calc(-50% + (var(--x, 0) * -3vw)),
         calc((var(--y, 0) * -2vw))
