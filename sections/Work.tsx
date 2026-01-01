@@ -16,6 +16,7 @@ type Project = {
 
 const projects: Project[] = [
   { title: "Saravanampatti", location: "Coimbatore", image: "/slider/kanaraj_residence.png" },
+  { title: "Saravanampatti", location: "Coimbatore", image: "/slider/giri_brindha_residence.png" },
   { title: "Saravanampatti", location: "Coimbatore", image: "/slider/gv_international.png" },
   { title: "Marudur", location: "Coimbatore", image: "/slider/rsr_srinvasan.png" },
   { title: "Luxury Villa", location: "Ooty", image: "/slider/krg_sampath.png" },
@@ -23,7 +24,7 @@ const projects: Project[] = [
   { title: "Saravanampatti", location: "Coimbatore", image: "/slider/eye_foundation.png" },
   // { title: "Saravanampatti", location: "Coimbatore", image: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000" },
   // { title: "Downtown Complex", location: "Chennai", image: "https://images.unsplash.com/photo-1709147617968-709368900af1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" },
-  { title: "Modern Office", location: "Bangalore", image: "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736" },
+  // { title: "Modern Office", location: "Bangalore", image: "https://images.unsplash.com/photo-1628012209120-d9db7abf7eab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736" },
 ];
 
 
