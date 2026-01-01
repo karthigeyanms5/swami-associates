@@ -145,12 +145,12 @@ export default function Legacy() {
                           Swami Associates
                         </h1>
                       </div>
-                      <p className="mt-4 text-red-600 text-2xl md:text-5xl font-medium">
+                      <p className="mt-4 text-red-600 text-4xl md:text-5xl font-medium">
                         Since 1988
                       </p>
                       </div>
                     </div>
-                     <p className="mt-6 text-red-600 text-2xl md:text-4xl font-medium">
+                     <p className="mt-4 text-red-600 text-2xl md:text-4xl font-medium">
                         Architecture| Engineering | Construction
      */}
           <img
