@@ -12,7 +12,7 @@ export default function WhyUs() {
 
   const points = [
     { desc: "Vastu compliant Buildings", icon: ShieldCheck },
-    { desc: "High Quality Materials as IS standards", icon: Award },
+    { desc: "High Quality Materials as per IS standards", icon: Award },
     { desc: "Efficient Space Planning and Elegant Designs", icon: Layout },
     { desc: "35+ years of Experiences in Execution", icon: Briefcase },
   ];
