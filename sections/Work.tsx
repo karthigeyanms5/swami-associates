@@ -17,7 +17,7 @@ type Project = {
 const projects: Project[] = [
   { title: "Mr.Kanagaraj Residence", location: "Karamadai", image: "/slider/kanaraj_residence.png" },
   { title: "GV Residence", location: "Mettupalayam", image: "/slider/giri_brindha_residence.png" },
-  { title: "Hotel GV International", location: "Mettupalayam", image: "/slider/geethalayam residence.jpeg" },
+  { title: "Hotel GV International", location: "Mettupalayam", image: "/slider/Hotel GV_International.png" },
   { title: "Mr.RSR Residence", location: "Mettupalayam", image: "/slider/rsr_srinvasan.png" },
   { title: "Mr.Sampath Residence", location: "Mettupalayam", image: "/slider/krg_sampath.png" },
   { title: "Sakthi Hospital", location: "Mettupalayam", image: "/slider/sakthi_hospital.png" },
