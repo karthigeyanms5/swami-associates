@@ -74,10 +74,11 @@ export default function Home() {
             <Legacy />
           </div>
         </div>
-        <WhyUs />
         <div ref={heroCarouselRef}>
           <HeroCarousel />
         </div>
+
+        <WhyUs />
         <div ref={serviceRef}>
           <Service />
         </div>
