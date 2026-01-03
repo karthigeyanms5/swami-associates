@@ -74,6 +74,7 @@ export default function Home() {
             <Legacy />
           </div>
         </div>
+        <WhyUs />
         <div ref={heroCarouselRef}>
           <HeroCarousel />
         </div>
@@ -83,7 +84,7 @@ export default function Home() {
         <div ref={workRef}>
           <Work />
         </div>
-        <WhyUs />
+        
         <Stats />
         <div ref={teamRef}>
           <Team />
