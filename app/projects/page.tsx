@@ -25,17 +25,17 @@ export default function Projects() {
     { id: 1, title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 2, title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 3, title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
-    { id: 4, title: 'Mr.Natrayan villas', category: 'Architectural Concept' },
-    { id: 5, title: 'Mr.Mani Residence', category: 'Architectural Concept' },
-    { id: 6, title: 'Mahajana School new Block', category: 'Architectural Concept' },
-    { id: 7, title: 'Mr.Vijayaraghavan Residence', category: 'Architectural Concept' },
-    { id: 8, title: 'Mrs.Preethika Devaraj', category: 'Architectural Concept' },
-    { id: 9, title: 'SRM Complex', category: 'Architectural Concept' },
-    { id: 10, title: 'Mr.Sriram Residence', category: 'Architectural Concept' },
-    { id: 11, title: 'Commercial Complex', category: 'Architectural Concept' },
-    { id: 12, title: 'Mr,Ramesh Residence', category: 'Architectural Concept' },
-    { id: 13, title: 'Vivith School Archway', category: 'Architectural Concept' },
-    { id: 14, title: 'Vivith School Archway', category: 'Architectural Concept' },
+    { id: 4, title: 'Mr.Natrayan villas @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 5, title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 6, title: 'Mahajana School new Block @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 7, title: 'Mr.Vijayaraghavan Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 8, title: 'Mrs.Preethika Devaraj @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 9, title: 'SRM Complex @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 10, title: 'Mr.Sriram Residence @ Saravanampatti', category: 'Architectural Concept' },
+    { id: 11, title: 'Commercial Complex @ Thalavadi', category: 'Architectural Concept' },
+    { id: 12, title: 'Mr,Ramesh Residence @ Bujanganur', category: 'Architectural Concept' },
+    { id: 13, title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
+    { id: 14, title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
   ];
 
   useGSAP(() => {
@@ -140,7 +140,7 @@ export default function Projects() {
             Our Works
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl">
-            Explore our portfolio of architectural masterpieces and design excellence
+            From Concepts to Construction explore our portfolio across residential, commercial,institutional and other typologies
           </p>
         </div>
 
