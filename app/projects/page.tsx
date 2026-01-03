@@ -165,10 +165,10 @@ export default function Projects() {
               <div className="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 pointer-events-none" />
 
               <div className={`info absolute bottom-0 left-0 right-0 p-6 ${isMobile ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'} pointer-events-none`}>
-                <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-3">
-                  {work.category}
-                </span>
-                <h3 className="text-white text-2xl font-light">
+                {/* <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2"> */}
+                {/*   {work.category} */}
+                {/* </span> */}
+                <h3 className="text-white text-base font-light">
                   {work.title}
                 </h3>
               </div>
