@@ -67,11 +67,25 @@
 .assets h5 {
     position: absolute;
     left: 50%;
-    top: 24%;
+    top: 20%;
     margin: 0;
     font-size: clamp(1rem, 3vw, 2rem); /* responsive font size */
     font-family: 'Bebas Neue', sans-serif;
     color: red;
+    transform: translate(
+        calc(-50% + (var(--x, 0) * -3vw)),
+        calc((var(--y, 0) * -2vw))
+    );
+}
+
+
+.assets h6 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
     transform: translate(
         calc(-50% + (var(--x, 0) * -3vw)),
         calc((var(--y, 0) * -2vw))
