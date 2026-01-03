@@ -129,7 +129,7 @@ export default function TopNav() {
            Blog 
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
-          <a href="#about" className="text-black hover:text-gray-700">
+          <a href="/about" className="text-black hover:text-gray-700">
             Why work with us
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
@@ -219,7 +219,7 @@ export default function TopNav() {
           variants={linkVariants}
         >
           <a
-            href="#why-us"
+            href="/about"
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
