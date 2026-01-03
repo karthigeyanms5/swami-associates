@@ -22,20 +22,20 @@ export default function Projects() {
   }, []);
 
   const projects = [
-    { id: 1, title: 'Tropical Home', category: 'Residential' },
-    { id: 2, title: 'Villa in Urban Context', category: 'Architecture' },
-    { id: 3, title: 'Weekend Getaway', category: 'Residential' },
-    { id: 4, title: 'Modern Interior', category: 'Interior Design' },
-    { id: 5, title: 'Urban Monument', category: 'Public Space' },
-    { id: 6, title: 'Waterfront Development', category: 'Urban Planning' },
-    { id: 7, title: 'Contemporary Villa', category: 'Residential' },
-    { id: 8, title: 'Minimalist Design', category: 'Architecture' },
-    { id: 9, title: 'Coastal Retreat', category: 'Residential' },
-    { id: 10, title: 'Urban Renewal', category: 'Commercial' },
-    { id: 11, title: 'Sustainable Living', category: 'Eco Design' },
-    { id: 12, title: 'Modern Aesthetics', category: 'Architecture' },
-    { id: 13, title: 'Cultural Center', category: 'Public Space' },
-    { id: 14, title: 'Luxury Estate', category: 'Residential' },
+    { id: 1, title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 2, title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 3, title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
+    { id: 4, title: 'Mr.Natrayan villas', category: 'Architectural Concept' },
+    { id: 5, title: 'Mr.Mani Residence', category: 'Architectural Concept' },
+    { id: 6, title: 'Mahajana School new Block', category: 'Architectural Concept' },
+    { id: 7, title: 'Mr.Vijayaraghavan Residence', category: 'Architectural Concept' },
+    { id: 8, title: 'Mrs.Preethika Devaraj', category: 'Architectural Concept' },
+    { id: 9, title: 'SRM Complex', category: 'Architectural Concept' },
+    { id: 10, title: 'Mr.Sriram Residence', category: 'Architectural Concept' },
+    { id: 11, title: 'Commercial Complex', category: 'Architectural Concept' },
+    { id: 12, title: 'Mr,Ramesh Residence', category: 'Architectural Concept' },
+    { id: 13, title: 'Vivith School Archway', category: 'Architectural Concept' },
+    { id: 14, title: 'Vivith School Archway', category: 'Architectural Concept' },
   ];
 
   useGSAP(() => {
