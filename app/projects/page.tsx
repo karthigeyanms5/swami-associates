@@ -22,20 +22,20 @@ export default function Projects() {
   }, []);
 
   const projects = [
-    { id: 1, title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 2, title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 3, title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
-    { id: 4, title: 'Mr.Natrayan villas @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 5, title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 6, title: 'Mahajana School new Block @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 7, title: 'Mr.Vijayaraghavan Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 8, title: 'Mrs.Preethika Devaraj @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 9, title: 'SRM Complex @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 10, title: 'Mr.Sriram Residence @ Saravanampatti', category: 'Architectural Concept' },
-    { id: 11, title: 'Commercial Complex @ Thalavadi', category: 'Architectural Concept' },
-    { id: 12, title: 'Mr,Ramesh Residence @ Bujanganur', category: 'Architectural Concept' },
-    { id: 13, title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
-    { id: 14, title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
+    { id: 1, src: "/images/RSR Srinvasan.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 2, src: "/images/RSR Srinvasan.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 3, src: "/images/RSR Srinvasan.png", title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
+    { id: 4, src: "/images/RSR Srinvasan.png", title: 'Mr.Natrayan villas @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 5, src: "/images/RSR Srinvasan.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 6, src: "/images/RSR Srinvasan.png", title: 'Mahajana School new Block @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 7, src: "/images/RSR Srinvasan.png", title: 'Mr.Vijayaraghavan Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 8, src: "/images/RSR Srinvasan.png", title: 'Mrs.Preethika Devaraj @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 9, src: "/images/RSR Srinvasan.png", title: 'SRM Complex @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 10, src: "/images/RSR Srinvasan.png", title: 'Mr.Sriram Residence @ Saravanampatti', category: 'Architectural Concept' },
+    { id: 11, src: "/images/RSR Srinvasan.png", title: 'Commercial Complex @ Thalavadi', category: 'Architectural Concept' },
+    { id: 12, src: "/images/RSR Srinvasan.png", title: 'Mr,Ramesh Residence @ Bujanganur', category: 'Architectural Concept' },
+    { id: 13, src: "/images/RSR Srinvasan.png", title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
+    { id: 14, src: "/images/RSR Srinvasan.png", title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
   ];
 
   useGSAP(() => {
@@ -147,7 +147,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((work, index) => (
             <div
-              key={work.id}
+              key={index}
               ref={(el) => {
                 if (el) itemsRef.current[index] = el;
               }}
@@ -156,7 +156,7 @@ export default function Projects() {
               onMouseLeave={handleMouseLeave}
             >
               <img
-                src={`/images/image-${work.id}.png`}
+                src={work.src}
                 alt={work.title}
                 className="w-full h-full object-cover transition-all duration-600 grayscale"
                 loading="lazy"
