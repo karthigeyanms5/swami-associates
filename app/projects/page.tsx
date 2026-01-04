@@ -22,12 +22,14 @@ export default function Projects() {
   }, []);
 
   const projects = [
-    { id: 1, src: "/slider/kanaraj_residence.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 2, src: "/slider/geethalayam_residence.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 3, src: "/slider/giri_brindha_residence.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 4, src: "/slider/krg_sampath.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 5, src: "/slider/sakthi_hospital.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 6, src: "/slider/eye_foundation.png" , title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 1, src: "/slider/kanaraj_residence.png", title: 'Mr.Kanagaraj Residence @ Mettupalayam', category: 'Residential Construction' },
+    { id: 2, src: "/slider/geethalayam_residence.png", title: 'Geethalayam Residence @ Karamadai', category: 'Residential Construction' },
+    { id: 3, src: "/slider/giri_brindha_residence.png", title: 'Mr.Giri Residence @ Mettupalayam', category: 'Residential Construction' },
+    { id: 4, src: "/slider/krg_sampath.png", title: 'Mr.Sampath Residence @ Mettupalayam', category: 'Residential Construction' },
+    { id: 5, src: "/slider/sakthi_hospital.png", title: 'Sakthi Hospital @ Mettupalayam', category: 'Planning Consulting' },
+     { id: 6, src: "/slider/srm.png" , title: 'SRM Complex @ Mettupalayam', category: 'Commercial Construction' },
+      { id: 6, src: "/slider/trg_ramesh.png" , title: 'Mr.Ramesh Residence @ Mettupalayam', category: 'Residential Construction' },
+    { id: 6, src: "/slider/eye_foundation.png" , title: 'Eye Foundation Complex @ Mettupalayam', category: 'Commercial Construction' },
     { id: 7, src: "/images/RSR Srinvasan.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 8, src: "/images/image-1.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 9, src: "/images/image-2.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
