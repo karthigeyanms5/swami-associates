@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="w-full bg-white text-black">
+    <><section className="w-full bg-white text-black">
       {/* Page Title */}
       <div className="w-full border-b border-black/10 py-16">
         <h1 className="max-w-6xl mx-auto px-6 text-4xl md:text-5xl font-semibold tracking-tight">
@@ -17,32 +17,28 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="text-red-600 text-sm uppercase tracking-widest mb-4">
-              Mr.Swaminathan 
+              Mr.Swaminathan
               Founder/Managing Director-Registered Engineer(LBS), DCE, AMIE
             </h2>
 
             <p className="text-black/80 text-base leading-8 mb-6">
               Mr. Swaminathan is the Founder and Managing Director of Swami Associates, bringing over 37 years of extensive field experience in civil engineering and construction.
-             </p>
-              He completed his Diploma in Civil Engineering from Government Polytechnic College, Coimbatore, in 1986, graduating as one of the top outgoing students of his batch, 
-              recognized for his academic excellence. 
-              He began his professional career as a Junior Engineer with the Tamil Nadu State Public Works Department and the Tamil Nadu State Highways Department, where he gained strong technical exposure.
-              </p>
-              In 1988, driven by entrepreneurial vision and professional integrity, he founded Swami Associates.
-              Since its inception, the firm has successfully delivered 150+ projects across diverse typologies,
-              consistently upholding quality, durability, and timely execution under his leadership. 
-              </p>
-              Beyond professional practice, Mr. Swaminathan has actively contributed to the engineering fraternity.
-              He served two terms as President of the Mettupalayam Civil Engineers Association, playing a pivotal role in strengthening the local engineering community.
-              He also held the position of Regional Chairman of the Federation of All Civil Engineers Associations of Tamil Nadu and Puducherry during 2018–2019.
-              </p>
-              Today, with decades of hands-on expertise and leadership, Mr. Swaminathan continues to guide Swami Associates with a commitment to technical excellence, ethical practice, and growth. 
-            </p>
+      </p><p className="text-black/70 text-base leading-8">
+             He completed his Diploma in Civil Engineering from Government Polytechnic College, Coimbatore, in 1986, graduating as one of the top outgoing students of his batch,
+            recognized for his academic excellence.
+            He began his professional career as a Junior Engineer with the Tamil Nadu State Public Works Department and the Tamil Nadu State Highways Department, where he gained strong technical exposure.
+      </p><p className="text-black/70 text-base leading-8">
+            In 1988, driven by entrepreneurial vision and professional integrity, he founded Swami Associates.
+            Since its inception, the firm has successfully delivered 150+ projects across diverse typologies,
+            consistently upholding quality, durability, and timely execution under his leadership.
+      </p><p className="text-black/70 text-base leading-8">
+            Beyond professional practice, Mr. Swaminathan has actively contributed to the engineering fraternity.
+            He served two terms as President of the Mettupalayam Civil Engineers Association, playing a pivotal role in strengthening the local engineering community.
+            He also held the position of Regional Chairman of the Federation of All Civil Engineers Associations of Tamil Nadu and Puducherry during 2018–2019.
+    </p><p className="text-black/70 text-base leading-8">
+            Today, with decades of hands-on expertise and leadership, Mr. Swaminathan continues to guide Swami Associates with a commitment to technical excellence, ethical practice, and growth.
 
-            <p className="text-black/70 text-base leading-8">
-              Our design philosophy emphasizes clarity, durability, and
-              efficiency — creating spaces that stand the test of time.
-            </p>
+      </p></>
           </div>
 
           <img
@@ -54,32 +50,29 @@ export default function About() {
 
         {/* Our Competencies */}
         <div className="grid md:grid-cols-2 gap-20 items-center">
-          <img
+          <><img
             src="/slider/kanaraj_residence.png"
             alt="Our competencies"
-            className="w-full h-[360px] object-cover rounded-sm"
-          />
+            className="w-full h-[360px] object-cover rounded-sm" /><div>
+              <h2 className="text-red-600 text-sm uppercase tracking-widest mb-4">
+                Our Competencies
+              </h2>
 
-          <div>
-            <h2 className="text-red-600 text-sm uppercase tracking-widest mb-4">
-              Our Competencies
-            </h2>
+              <p className="text-black/80 text-base leading-8 mb-6">
+                Our core competencies span Architectural Design, Structural
+                Planning, and integrated construction coordination.
+              </p>
 
-            <p className="text-black/80 text-base leading-8 mb-6">
-              Our core competencies span Architectural Design, Structural
-              Planning, and integrated construction coordination.
-            </p>
-
-            <p className="text-black/70 text-base leading-8">
-              Supported by experienced consultants and in-house project
-              engineering, we deliver reliable end-to-end solutions.
-            </p>
-          </div>
+              <p className="text-black/70 text-base leading-8">
+                Supported by experienced consultants and in-house project
+                engineering, we deliver reliable end-to-end solutions.
+              </p>
+            </div></>
         </div>
 
         {/* Our Strength */}
         <div className="grid md:grid-cols-2 gap-20 items-center">
-          <div>
+          <><div>
             <h2 className="text-red-600 text-sm uppercase tracking-widest mb-4">
               Our Strength
             </h2>
@@ -93,13 +86,10 @@ export default function About() {
               Strong systems, clear communication, and strict quality control
               ensure consistency across every project we deliver.
             </p>
-          </div>
-
-          <img
-            src="/images/RSR Srinvasan.png"
-            alt="Our strength"
-            className="w-full h-[360px] object-cover rounded-sm"
-          />
+          </div><img
+              src="/images/RSR Srinvasan.png"
+              alt="Our strength"
+              className="w-full h-[360px] object-cover rounded-sm" /></>
         </div>
       </div>
     </section>
