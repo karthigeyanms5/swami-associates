@@ -33,7 +33,7 @@ export default function About() {
           </div>
 
           <img
-            src="/slider/giri_brindha_residence.png"
+            src="team/swami.jpg"
             alt="Who we are"
             className="w-full h-[360px] object-cover rounded-sm"
           />
