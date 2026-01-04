@@ -17,13 +17,26 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="text-red-600 text-sm uppercase tracking-widest mb-4">
-              Who We Are
+              Mr.Swaminathan 
+              Founder/Managing Director-Registered Engineer(LBS), DCE, AMIE
             </h2>
 
             <p className="text-black/80 text-base leading-8 mb-6">
-              We are a construction-focused architectural practice delivering
-              robust, functional, and contemporary building solutions across
-              residential and commercial projects.
+              Mr. Swaminathan is the Founder and Managing Director of Swami Associates, bringing over 37 years of extensive field experience in civil engineering and construction.
+             </p>
+              He completed his Diploma in Civil Engineering from Government Polytechnic College, Coimbatore, in 1986, graduating as one of the top outgoing students of his batch, 
+              recognized for his academic excellence. 
+              He began his professional career as a Junior Engineer with the Tamil Nadu State Public Works Department and the Tamil Nadu State Highways Department, where he gained strong technical exposure.
+              </p>
+              In 1988, driven by entrepreneurial vision and professional integrity, he founded Swami Associates.
+              Since its inception, the firm has successfully delivered 150+ projects across diverse typologies,
+              consistently upholding quality, durability, and timely execution under his leadership. 
+              </p>
+              Beyond professional practice, Mr. Swaminathan has actively contributed to the engineering fraternity.
+              He served two terms as President of the Mettupalayam Civil Engineers Association, playing a pivotal role in strengthening the local engineering community.
+              He also held the position of Regional Chairman of the Federation of All Civil Engineers Associations of Tamil Nadu and Puducherry during 2018–2019.
+              </p>
+              Today, with decades of hands-on expertise and leadership, Mr. Swaminathan continues to guide Swami Associates with a commitment to technical excellence, ethical practice, and growth. 
             </p>
 
             <p className="text-black/70 text-base leading-8">
