@@ -1,6 +1,7 @@
 export default function About() {
   return (
-    <><section className="w-full bg-white text-black">
+    <>
+      <section className="w-full bg-white text-black">
       {/* Page Title */}
       <div className="w-full border-b border-black/10 py-16">
         <h1 className="max-w-6xl mx-auto px-6 text-4xl md:text-5xl font-semibold tracking-tight">
@@ -38,7 +39,7 @@ export default function About() {
     </p><p className="text-black/70 text-base leading-8">
             Today, with decades of hands-on expertise and leadership, Mr. Swaminathan continues to guide Swami Associates with a commitment to technical excellence, ethical practice, and growth.
 
-      </p></>
+      </p>
           </div>
 
           <img
@@ -93,5 +94,6 @@ export default function About() {
         </div>
       </div>
     </section>
+</>
   );
 }
