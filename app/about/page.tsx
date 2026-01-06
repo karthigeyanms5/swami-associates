@@ -15,24 +15,22 @@ export default function About() {
       {/* Content Wrapper */}
       <div className="max-w-6xl mx-auto px-6 py-24 space-y-32">
         {/* Who We Are */}
-        <div className="space-y-8">
-          {/* Image and Heading Section */}
-          <div className="flex justify-end">
-            <div className="w-full md:w-[400px] space-y-4">
-              <img
-                src="team/swami.jpg"
-                alt="Mr. Swaminathan"
-                className="w-full h-[360px] object-cover rounded-sm"
-              />
-              <h2 className="text-red-600 text-sm uppercase tracking-widest">
-                Mr.Swaminathan
-                <br />
-                Founder/Managing Director-Registered Engineer(LBS), DCE, AMIE
-              </h2>
-            </div>
+        <div>
+          {/* Image and Heading - Float Left */}
+          <div className="float-left mr-8 mb-6 w-full md:w-[380px]">
+            <img
+              src="team/swami.jpg"
+              alt="Mr. Swaminathan"
+              className="w-full h-[360px] object-cover rounded-sm mb-4"
+            />
+            <h2 className="text-red-600 text-sm uppercase tracking-widest">
+              Mr.Swaminathan
+              <br />
+              Founder/Managing Director-Registered Engineer(LBS), DCE, AMIE
+            </h2>
           </div>
 
-          {/* Text Content */}
+          {/* Text Content - Flows Around and Below Image */}
           <div className="text-justify space-y-6">
             <p className="text-black/80 text-base leading-8">
               Mr. Swaminathan is the Founder and Managing Director of Swami Associates, bringing over 37 years of extensive field experience in civil engineering and construction.
@@ -54,6 +52,9 @@ export default function About() {
               Today, with decades of hands-on expertise and leadership, Mr. Swaminathan continues to guide Swami Associates with a commitment to technical excellence, ethical practice, and growth.
             </p>
           </div>
+          
+          {/* Clear float */}
+          <div className="clear-both"></div>
         </div>
 
         {/* Our Competencies */}
