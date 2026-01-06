@@ -17,7 +17,7 @@ export default function About() {
         {/* About Us Introduction */}
         <div className="text-justify">
           <p className="text-black/80 text-base leading-8 mb-6">
-            We are a renowned firm with over 35 years of experience specializing in Civil engineering and Building construction. We as a firm offer wide range of services such as Planning, Designing, Building construction services, Estimations, and Building Sanctions/Approvals Drawings with assistance.
+            We are a renowned firm with over 38 years of experience specializing in Civil engineering and Building construction. We as a firm offer wide range of services such as Planning, Designing, Building construction services, Estimations, and Building Sanctions/Approvals Drawings with assistance.
           </p>
           <p className="text-black/70 text-base leading-8 mb-6">
             Over the past years, we have completed over 150+ projects ranging from Residential, Commercial, Hospitality, Industrial and health care in and around the Mettupalayam and Coimbatore.
