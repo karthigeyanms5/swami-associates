@@ -14,8 +14,25 @@ export default function About() {
 
       {/* Content Wrapper */}
       <div className="max-w-6xl mx-auto px-6 py-24 space-y-32">
-        {/* Who We Are */}
+        {/* About Us Introduction */}
+        <div className="text-justify">
+          <p className="text-black/80 text-base leading-8 mb-6">
+            We are a renowned firm with over 35 years of experience specializing in Civil engineering and Building construction. We as a firm offer wide range of services such as Planning, Designing, Building construction services, Estimations, and Building Sanctions/Approvals Drawings with assistance.
+          </p>
+          <p className="text-black/70 text-base leading-8 mb-6">
+            Over the past years, we have completed over 150+ projects ranging from Residential, Commercial, Hospitality, Industrial and health care in and around the Mettupalayam and Coimbatore.
+          </p>
+          <p className="text-black/70 text-base leading-8">
+            Through the uncompromised vision of our Founder & Managing Director Er.Swaminathan, senior consulting Engineer and Builder, Swami Associates takes pride on its ability to commit to sheer quality and deliver the same.
+          </p>
+        </div>
+
+        {/* About Our Founder */}
         <div>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+            About Our Founder
+          </h2>
+          
           {/* Image and Heading - Float Left */}
           <div className="float-left mr-8 mb-6 w-full md:w-[380px]">
             <img
@@ -23,11 +40,11 @@ export default function About() {
               alt="Mr. Swaminathan"
               className="w-full h-[360px] object-cover rounded-sm mb-4"
             />
-            <h2 className="text-red-600 text-sm uppercase tracking-widest">
+            <h3 className="text-red-600 text-sm uppercase tracking-widest">
               Mr.Swaminathan
               <br />
               Founder/Managing Director-Registered Engineer(LBS), DCE, AMIE
-            </h2>
+            </h3>
           </div>
 
           {/* Text Content - Flows Around and Below Image */}
