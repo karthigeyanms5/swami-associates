@@ -70,4 +70,11 @@ export default function About() {
             </p>
           </div>
           
+          {/* Clear float */}
+          <div className="clear-both"></div>
+        </div>
+      </div>
+    </section>
+    </>
+  );
 }
