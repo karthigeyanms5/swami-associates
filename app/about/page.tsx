@@ -31,19 +31,19 @@ export default function About() {
           </div>
 
           {/* Text Content - Flows Around and Below Image */}
-          <div className="text-justify space-y-6">
-            <p className="text-black/80 text-base leading-8">
+          <div className="text-justify">
+            <p className="text-black/80 text-base leading-8 mb-6">
               Mr. Swaminathan is the Founder and Managing Director of Swami Associates, bringing over 37 years of extensive field experience in civil engineering and construction.
             </p>
-            <p className="text-black/70 text-base leading-8">
+            <p className="text-black/70 text-base leading-8 mb-6">
               He began his professional career as a Junior Engineer with the Tamil Nadu State Public Works Department and the Tamil Nadu State Highways Department, where he gained strong technical exposure.
             </p>
-            <p className="text-black/70 text-base leading-8">
+            <p className="text-black/70 text-base leading-8 mb-6">
               In 1988, driven by entrepreneurial vision and professional integrity, he founded Swami Associates.
               Since its inception, the firm has successfully delivered 150+ projects across diverse typologies,
               consistently upholding quality, durability, and timely execution under his leadership.
             </p>
-            <p className="text-black/70 text-base leading-8">
+            <p className="text-black/70 text-base leading-8 mb-6">
               Beyond professional practice, Mr. Swaminathan has actively contributed to the engineering fraternity.
               He served two terms as President of the Mettupalayam Civil Engineers Association, playing a pivotal role in strengthening the local engineering community.
               He also held the position of Regional Chairman of the Federation of All Civil Engineers Associations of Tamil Nadu and Puducherry during 2018–2019.
