@@ -44,7 +44,6 @@ export default function Projects() {
     { id: 20, src: "/images/image-11.png", title: 'Commercial Complex @ Thalavadi', category: 'Architectural Concept' },
     { id: 21, src: "/images/image-12.png", title: 'Mr,Ramesh Residence @ Bujanganur', category: 'Architectural Concept' },
     { id: 22, src: "/images/image-13.png", title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
-    { id: 23, src: "/images/image-14.png", title: 'Vivith School Archway @ Velliangadu', category: 'Architectural Concept' },
   ];
 
   useGSAP(() => {
