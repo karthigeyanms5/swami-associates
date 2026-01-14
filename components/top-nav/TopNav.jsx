@@ -130,7 +130,7 @@ export default function TopNav() {
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a href="/about" className="text-black hover:text-gray-700">
-            Why work with us
+            About us
           </a>
           <div className="bg-red-300 w-0.5 h-4 rounded-full mt-1"></div>
           <a
