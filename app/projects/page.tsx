@@ -176,7 +176,7 @@ export default function Projects() {
               <div className={`info absolute bottom-0 left-0 right-0 p-6 ${isMobile ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'} pointer-events-none`}>
                 {/* <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2"> */}
                 {/*   {work.category} */}
-                {/* </span> */}
+                {/* </span> 
                 <h3 className="text-white text-base font-light">
                   {work.title}
                 </h3>
