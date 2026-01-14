@@ -30,7 +30,7 @@ export default function Projects() {
     { id: 6, src: "/slider/srm.png" , title: 'SRM Complex @ Mettupalayam', category: 'Commercial Construction' },
     { id: 7, src: "/slider/trg_ramesh.png" , title: 'Mr.Ramesh Residence @ Mettupalayam', category: 'Residential Construction' },
     { id: 8, src: "/slider/eye_foundation.png" , title: 'Eye Foundation Complex @ Mettupalayam', category: 'Commercial Construction' },
-    { id: 9, src: "/images/RSR Srinvasan.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
+    { id: 9, src: "/images/RSR Srinvasan.png", title: 'Mr.RSR Residence @ Mettupalayam', category: 'Renovation' },
     { id: 10, src: "/images/image-1.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 11, src: "/images/image-2.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 12, src: "/images/image-3.png", title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
