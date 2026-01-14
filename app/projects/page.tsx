@@ -149,7 +149,7 @@ export default function Projects() {
             Our Works
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl">
-            From Concepts to Construction explore our portfolio across different Typologies
+            From Concepts to Construction explore some of our works across different Typologies
           </p>
         </div>
 
