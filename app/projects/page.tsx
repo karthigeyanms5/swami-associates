@@ -33,7 +33,7 @@ export default function Projects() {
     { id: 9, src: "/images/RSR Srinvasan.png", title: 'Mr.RSR Residence @ Mettupalayam', category: 'Renovation' },
     { id: 10, src: "/images/image-1.png", title: 'Mr.Charles Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 11, src: "/images/image-2.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
-    { id: 12, src: "/images/image-3.png", title: 'Mr.Ramesh Residence @ Mettupalayam', category: ' Architectural Concept' },
+    { id: 12, src: "/images/image-3.png", title: 'Mr.Ramesh Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 13, src: "/images/image-4.png", title: 'Mr.Natrayan villas @ Mettupalayam', category: 'Architectural Concept' },
     { id: 14, src: "/images/image-5.png", title: 'Mr.Mani Residence @ Mettupalayam', category: 'Architectural Concept' },
     { id: 15, src: "/images/image-6.png", title: 'Mahajana School new Block @ Mettupalayam', category: 'Architectural Concept' },
@@ -51,7 +51,7 @@ export default function Projects() {
     itemsRef.current.forEach((item, i) => {
       if (!item) return;
 
-      // Simpler entrance animation
+      // Entrance animation
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
@@ -65,7 +65,7 @@ export default function Projects() {
         delay: isMobile ? 0 : (i % 3) * 0.1,
       });
 
-      // Mobile-specific color change with IntersectionObserver approach
+      // Mobile color change
       if (isMobile) {
         ScrollTrigger.create({
           trigger: item,
@@ -87,31 +87,19 @@ export default function Projects() {
   }, { scope: containerRef, dependencies: [isMobile] });
 
   const handleMouseEnter = (e: any) => {
-    // Skip hover effects on mobile
     if (isMobile) return;
 
     const img = e.currentTarget.querySelector('img');
     const overlay = e.currentTarget.querySelector('.overlay');
-    const info = e.currentTarget.querySelector('.info');
+    const category = e.currentTarget.querySelector('span');
+    const title = e.currentTarget.querySelector('h3');
 
-    gsap.to(img, {
-      filter: 'grayscale(0%)',
-      scale: 1.05,
-      duration: 0.6,
-      ease: 'power2.out',
-    });
-
-    gsap.to(overlay, {
-      opacity: 0.7,
-      duration: 0.4,
-    });
-
-    gsap.to(info, {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.out',
-    });
+    gsap.to(img, { filter: 'grayscale(0%)', scale: 1.05, duration: 0.6, ease: 'power2.out' });
+    gsap.to(overlay, { opacity: 0.7, duration: 0.4 });
+    
+    // Staggered text animation
+    gsap.to(category, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(1.7)' });
+    gsap.to(title, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: 'power2.out' });
   };
 
   const handleMouseLeave = (e: any) => {
@@ -119,26 +107,14 @@ export default function Projects() {
 
     const img = e.currentTarget.querySelector('img');
     const overlay = e.currentTarget.querySelector('.overlay');
-    const info = e.currentTarget.querySelector('.info');
+    const category = e.currentTarget.querySelector('span');
+    const title = e.currentTarget.querySelector('h3');
 
-    gsap.to(img, {
-      filter: 'grayscale(100%)',
-      scale: 1,
-      duration: 0.6,
-      ease: 'power2.out',
-    });
-
-    gsap.to(overlay, {
-      opacity: 0,
-      duration: 0.4,
-    });
-
-    gsap.to(info, {
-      y: 20,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.in',
-    });
+    gsap.to(img, { filter: 'grayscale(100%)', scale: 1, duration: 0.6, ease: 'power2.out' });
+    gsap.to(overlay, { opacity: 0, duration: 0.4 });
+    
+    gsap.to(category, { opacity: 0, scale: 0.9, duration: 0.3 });
+    gsap.to(title, { opacity: 0, y: 2, duration: 0.4 });
   };
 
   return (
@@ -173,11 +149,11 @@ export default function Projects() {
 
               <div className="overlay absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 pointer-events-none" />
 
-              <div className={`info absolute bottom-0 left-0 right-0 p-6 ${isMobile ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'} pointer-events-none`}>
-                {/* <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-2"> */}
-                {/*   {work.category} */}
-                {/* </span> 
-                <h3 className="text-white text-base font-light">
+              <div className={`info absolute bottom-0 left-0 right-0 p-6 pointer-events-none ${isMobile ? 'translate-y-0 opacity-100' : ''}`}>
+                <span className={`inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full mb-3 ${isMobile ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                  {work.category}
+                </span>
+                <h3 className={`text-white text-base md:text-lg font-light leading-tight ${isMobile ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                   {work.title}
                 </h3>
               </div>
