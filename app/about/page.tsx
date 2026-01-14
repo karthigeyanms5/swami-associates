@@ -36,7 +36,7 @@ export default function About() {
           {/* Image and Heading - Float Left */}
           <div className="float-left mr-8 mb-6 w-full md:w-[380px]">
             <img
-              src="team/swami.jpg"
+              src="team/Mr.Swaminathan_Photo.jpeg"
               alt="Mr. Swaminathan"
               className="w-full h-[360px] object-cover rounded-sm mb-4"
             />
