@@ -223,7 +223,7 @@ export default function TopNav() {
             className="block w-full h-full"
             onClick={() => setIsOpen(false)}
           >
-            Why work with us
+            About us
           </a>
         </motion.li>
         <motion.li
