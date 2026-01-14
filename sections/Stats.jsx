@@ -87,7 +87,7 @@ export default function Stats() {
           <div className="transform transition-transform duration-300 ">
             <span
               ref={(el) => (statsRef.current[4] = el)}
-              data-target={new Date().getFullYear() - 1988}
+              data-target={new Date().getFullYear() - 1989}
               className="text-5xl md:text-6xl font-bold text-gray-800 inline-block"
             >
               0+
