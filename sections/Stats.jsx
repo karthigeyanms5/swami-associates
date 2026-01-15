@@ -46,7 +46,7 @@ export default function Stats() {
             >
               0+
             </span>
-            <p className="mt-3 text-lg text-red-500 font-medium">
+            <p className="notranslate mt-3 text-lg text-red-500 font-medium">
               Total projects
             </p>
           </div>
