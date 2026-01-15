@@ -25,7 +25,7 @@ export default function Projects() {
     { id: 1, src: "/slider/kanaraj_residence.png", title: 'Mr.Kanagaraj Residence @ Mettupalayam', category: 'Residential Construction' },
     { id: 2, src: "/slider/geethalayam_residence.png", title: 'Geethalayam Residence @ Karamadai', category: 'Residential Construction' },
     { id: 3, src: "/slider/giri_brindha_residence.png", title: 'Mr.Giri Residence @ Mettupalayam', category: 'Residential Construction' },
-    { id: 4, src: "/images/Mr.Padabanaban_residence.png", title: 'Mr.Padhabanaban Residence @ Karamadai', category: 'Residential Construction' },
+    { id: 4, src: "/images/Mr.padabanaban_Residence.png", title: 'Mr.Padhabanaban Residence @ Karamadai', category: 'Residential Construction' },
     { id: 5, src: "/slider/krg_sampath.png", title: 'Mr.Sampath Residence @ Mettupalayam', category: 'Residential Construction' },
     { id: 6, src: "/slider/sakthi_hospital.png", title: 'Sakthi Hospital @ Mettupalayam', category: 'Planning Consulting' },
     { id: 7, src: "/slider/srm.png" , title: 'SRM Complex @ Mettupalayam', category: 'Commercial Construction' },
