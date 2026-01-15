@@ -104,7 +104,7 @@ const Work: React.FC = () => {
           {/*   ARCHITECTURE SERVICES */}
           {/* </p> */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight max-w-4xl">
-            <span className="text-red-600">We strive</span> to create functional and modern
+            <span className="text-red-600">We strive</span> to create functional and modern 
             <br className="hidden sm:block" />
             buildings with{" "}
             <span className="text-red-600">sheer quality</span>
