@@ -16,19 +16,6 @@ export const metadata: Metadata = {
     description: 'Civil engineering and Building construction in Mettupalayam',
     url: 'https://swami-associates.in/',
     siteName: 'Swami Associates',
-    images: [
-      {
-        url: 'https://swami-associates.in/logo.jpg', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://swami-associates.in/logo.jpg', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
-      },
-    ],
     locale: 'en_IN',
     type: 'website',
   },
